@@ -1,0 +1,1163 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B0791BF9-7BCE-4052-AB30-F6648CBD0FED}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>RetailSoft</RootNamespace>
+    <AssemblyName>RetailSoft</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Connected Services\LogisticaWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\ReporteWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\RRHHWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\VentasWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Estado.cs" />
+    <Compile Include="frmInicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInicio.designer.cs">
+      <DependentUpon>frmInicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmInicioSesion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInicioSesion.Designer.cs">
+      <DependentUpon>frmInicioSesion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="RetailSoftLogistica\frmBotonCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RetailSoftLogistica\frmBotonCategoria.designer.cs">
+      <DependentUpon>frmBotonCategoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RetailSoftLogistica\frmBotonMarca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RetailSoftLogistica\frmBotonMarca.designer.cs">
+      <DependentUpon>frmBotonMarca.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RetailSoftLogistica\frmBotonProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RetailSoftLogistica\frmBotonProveedor.designer.cs">
+      <DependentUpon>frmBotonProveedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RetailSoftLogistica\frmBusquedaAlmacen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RetailSoftLogistica\frmBusquedaAlmacen.Designer.cs">
+      <DependentUpon>frmBusquedaAlmacen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RetailSoftLogistica\frmBusquedaNombrePro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RetailSoftLogistica\frmBusquedaNombrePro.Designer.cs">
+      <DependentUpon>frmBusquedaNombrePro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RetailSoftLogistica\frmBusquedaProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RetailSoftLogistica\frmBusquedaProducto.Designer.cs">
+      <DependentUpon>frmBusquedaProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RetailSoftLogistica\frmBusquedaProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RetailSoftLogistica\frmBusquedaProveedor.Designer.cs">
+      <DependentUpon>frmBusquedaProveedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RetailSoftLogistica\frmDatosProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RetailSoftLogistica\frmDatosProveedor.Designer.cs">
+      <DependentUpon>frmDatosProveedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RetailSoftLogistica\frmFiltroFechas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RetailSoftLogistica\frmFiltroFechas.Designer.cs">
+      <DependentUpon>frmFiltroFechas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RetailSoftLogistica\frmGestionLote.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RetailSoftLogistica\frmGestionLote.Designer.cs">
+      <DependentUpon>frmGestionLote.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RetailSoftLogistica\frmGestionProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RetailSoftLogistica\frmGestionProducto.Designer.cs">
+      <DependentUpon>frmGestionProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RetailSoftLogistica\frmInformacionAlmacen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RetailSoftLogistica\frmInformacionAlmacen.Designer.cs">
+      <DependentUpon>frmInformacionAlmacen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RetailSoftLogistica\frmInformacionProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RetailSoftLogistica\frmInformacionProveedor.Designer.cs">
+      <DependentUpon>frmInformacionProveedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RetailSoftLogistica\frmLote.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RetailSoftLogistica\frmLote.Designer.cs">
+      <DependentUpon>frmLote.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RetailSoftLogistica\frmMaestroAlmacén.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RetailSoftLogistica\frmMaestroAlmacén.Designer.cs">
+      <DependentUpon>frmMaestroAlmacén.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RetailSoftLogistica\frmMaestroProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RetailSoftLogistica\frmMaestroProveedor.Designer.cs">
+      <DependentUpon>frmMaestroProveedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RetailSoftLogistica\frmNuevoAlmacen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RetailSoftLogistica\frmNuevoAlmacen.Designer.cs">
+      <DependentUpon>frmNuevoAlmacen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RetailSoftLogistica\frmProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RetailSoftLogistica\frmProducto.Designer.cs">
+      <DependentUpon>frmProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RetailSoftLogistica\frmVisorReporte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RetailSoftLogistica\frmVisorReporte.Designer.cs">
+      <DependentUpon>frmVisorReporte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RetailSoftRRHH\frmEnviarCorreo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RetailSoftRRHH\frmEnviarCorreo.Designer.cs">
+      <DependentUpon>frmEnviarCorreo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RetailSoftLogistica\frmLogisticaPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RetailSoftLogistica\frmLogisticaPrincipal.Designer.cs">
+      <DependentUpon>frmLogisticaPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RetailSoftRRHH\frmBusquedaColaboradores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RetailSoftRRHH\frmBusquedaColaboradores.Designer.cs">
+      <DependentUpon>frmBusquedaColaboradores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RetailSoftRRHH\frmDatosColaborador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RetailSoftRRHH\frmDatosColaborador.Designer.cs">
+      <DependentUpon>frmDatosColaborador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RetailSoftRRHH\frmDatosCargo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RetailSoftRRHH\frmDatosCargo.Designer.cs">
+      <DependentUpon>frmDatosCargo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RetailSoftRRHH\frmFilaBusquedaColaboradores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RetailSoftRRHH\frmFilaBusquedaColaboradores.Designer.cs">
+      <DependentUpon>frmFilaBusquedaColaboradores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RetailSoftRRHH\frmFilaColaborador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RetailSoftRRHH\frmFilaColaborador.Designer.cs">
+      <DependentUpon>frmFilaColaborador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RetailSoftRRHH\frmGestionAsistencias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RetailSoftRRHH\frmGestionAsistencias.Designer.cs">
+      <DependentUpon>frmGestionAsistencias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RetailSoftRRHH\frmGestionColaboradores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RetailSoftRRHH\frmGestionColaboradores.Designer.cs">
+      <DependentUpon>frmGestionColaboradores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RetailSoftRRHH\frmGestionEventos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RetailSoftRRHH\frmGestionEventos.Designer.cs">
+      <DependentUpon>frmGestionEventos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RetailSoftRRHH\frmGestionReclutamiento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RetailSoftRRHH\frmGestionReclutamiento.designer.cs">
+      <DependentUpon>frmGestionReclutamiento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RetailSoftRRHH\frmMaestroCandidato.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RetailSoftRRHH\frmMaestroCandidato.designer.cs">
+      <DependentUpon>frmMaestroCandidato.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RetailSoftRRHH\frmMaestroColaborador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RetailSoftRRHH\frmMaestroColaborador.Designer.cs">
+      <DependentUpon>frmMaestroColaborador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RetailSoftRRHH\frmMaestroEvento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RetailSoftRRHH\frmMaestroEvento.Designer.cs">
+      <DependentUpon>frmMaestroEvento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RetailSoftRRHH\frmMaestroPuestoTrabajo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RetailSoftRRHH\frmMaestroPuestoTrabajo.designer.cs">
+      <DependentUpon>frmMaestroPuestoTrabajo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RetailSoftRRHH\frmRRHHPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RetailSoftRRHH\frmRRHHPrincipal.Designer.cs">
+      <DependentUpon>frmRRHHPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RetailSoftVentas\DatosCompartidos.cs" />
+    <Compile Include="RetailSoftVentas\frmBusquedaCategorias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RetailSoftVentas\frmBusquedaCategorias.Designer.cs">
+      <DependentUpon>frmBusquedaCategorias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RetailSoftVentas\frmBusquedaProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RetailSoftVentas\frmBusquedaProductos.Designer.cs">
+      <DependentUpon>frmBusquedaProductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RetailSoftVentas\frmBusquedaProductosEnPromo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RetailSoftVentas\frmBusquedaProductosEnPromo.Designer.cs">
+      <DependentUpon>frmBusquedaProductosEnPromo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RetailSoftVentas\frmBusquedaVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RetailSoftVentas\frmBusquedaVentas.Designer.cs">
+      <DependentUpon>frmBusquedaVentas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RetailSoftVentas\frmDatosCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RetailSoftVentas\frmDatosCategoria.designer.cs">
+      <DependentUpon>frmDatosCategoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RetailSoftVentas\frmDatosProductoEnPromo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RetailSoftVentas\frmDatosProductoEnPromo.designer.cs">
+      <DependentUpon>frmDatosProductoEnPromo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RetailSoftVentas\frmDatosProductoSeleccionado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RetailSoftVentas\frmDatosProductoSeleccionado.Designer.cs">
+      <DependentUpon>frmDatosProductoSeleccionado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RetailSoftVentas\frmDatosPromocion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RetailSoftVentas\frmDatosPromocion.Designer.cs">
+      <DependentUpon>frmDatosPromocion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RetailSoftVentas\frmFilaCategorias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RetailSoftVentas\frmFilaCategorias.designer.cs">
+      <DependentUpon>frmFilaCategorias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RetailSoftVentas\frmFilaProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RetailSoftVentas\frmFilaProducto.Designer.cs">
+      <DependentUpon>frmFilaProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RetailSoftVentas\frmFilaPromocion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RetailSoftVentas\frmFilaPromocion.designer.cs">
+      <DependentUpon>frmFilaPromocion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RetailSoftVentas\frmGestionarPedidos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RetailSoftVentas\frmGestionarPedidos.Designer.cs">
+      <DependentUpon>frmGestionarPedidos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RetailSoftVentas\frmGestionarVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RetailSoftVentas\frmGestionarVenta.Designer.cs">
+      <DependentUpon>frmGestionarVenta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RetailSoftVentas\frmMaestroCategorias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RetailSoftVentas\frmMaestroCategorias.Designer.cs">
+      <DependentUpon>frmMaestroCategorias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RetailSoftVentas\frmMaestroPromociones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RetailSoftVentas\frmMaestroPromociones.Designer.cs">
+      <DependentUpon>frmMaestroPromociones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RetailSoftVentas\frmMenuDeslizante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RetailSoftVentas\frmMenuDeslizante.Designer.cs">
+      <DependentUpon>frmMenuDeslizante.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RetailSoftVentas\frmMenuVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RetailSoftVentas\frmMenuVentas.Designer.cs">
+      <DependentUpon>frmMenuVentas.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="frmInicio.resx">
+      <DependentUpon>frmInicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInicioSesion.resx">
+      <DependentUpon>frmInicioSesion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RetailSoftLogistica\frmBotonCategoria.resx">
+      <DependentUpon>frmBotonCategoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RetailSoftLogistica\frmBotonMarca.resx">
+      <DependentUpon>frmBotonMarca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RetailSoftLogistica\frmBotonProveedor.resx">
+      <DependentUpon>frmBotonProveedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RetailSoftLogistica\frmBusquedaAlmacen.resx">
+      <DependentUpon>frmBusquedaAlmacen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RetailSoftLogistica\frmBusquedaNombrePro.resx">
+      <DependentUpon>frmBusquedaNombrePro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RetailSoftLogistica\frmBusquedaProducto.resx">
+      <DependentUpon>frmBusquedaProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RetailSoftLogistica\frmBusquedaProveedor.resx">
+      <DependentUpon>frmBusquedaProveedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RetailSoftLogistica\frmDatosProveedor.resx">
+      <DependentUpon>frmDatosProveedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RetailSoftLogistica\frmFiltroFechas.resx">
+      <DependentUpon>frmFiltroFechas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RetailSoftLogistica\frmGestionLote.resx">
+      <DependentUpon>frmGestionLote.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RetailSoftLogistica\frmGestionProducto.resx">
+      <DependentUpon>frmGestionProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RetailSoftLogistica\frmInformacionAlmacen.resx">
+      <DependentUpon>frmInformacionAlmacen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RetailSoftLogistica\frmInformacionProveedor.resx">
+      <DependentUpon>frmInformacionProveedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RetailSoftLogistica\frmLote.resx">
+      <DependentUpon>frmLote.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RetailSoftLogistica\frmMaestroAlmacén.resx">
+      <DependentUpon>frmMaestroAlmacén.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RetailSoftLogistica\frmMaestroProveedor.resx">
+      <DependentUpon>frmMaestroProveedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RetailSoftLogistica\frmNuevoAlmacen.resx">
+      <DependentUpon>frmNuevoAlmacen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RetailSoftLogistica\frmProducto.resx">
+      <DependentUpon>frmProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RetailSoftLogistica\frmVisorReporte.resx">
+      <DependentUpon>frmVisorReporte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RetailSoftRRHH\frmEnviarCorreo.resx">
+      <DependentUpon>frmEnviarCorreo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RetailSoftLogistica\frmLogisticaPrincipal.resx">
+      <DependentUpon>frmLogisticaPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RetailSoftRRHH\frmBusquedaColaboradores.resx">
+      <DependentUpon>frmBusquedaColaboradores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RetailSoftRRHH\frmDatosCargo.resx">
+      <DependentUpon>frmDatosCargo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RetailSoftRRHH\frmDatosColaborador.resx">
+      <DependentUpon>frmDatosColaborador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RetailSoftRRHH\frmFilaBusquedaColaboradores.resx">
+      <DependentUpon>frmFilaBusquedaColaboradores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RetailSoftRRHH\frmFilaColaborador.resx">
+      <DependentUpon>frmFilaColaborador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RetailSoftRRHH\frmGestionAsistencias.resx">
+      <DependentUpon>frmGestionAsistencias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RetailSoftRRHH\frmGestionColaboradores.resx">
+      <DependentUpon>frmGestionColaboradores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RetailSoftRRHH\frmGestionEventos.resx">
+      <DependentUpon>frmGestionEventos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RetailSoftRRHH\frmGestionReclutamiento.resx">
+      <DependentUpon>frmGestionReclutamiento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RetailSoftRRHH\frmMaestroCandidato.resx">
+      <DependentUpon>frmMaestroCandidato.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RetailSoftRRHH\frmMaestroColaborador.resx">
+      <DependentUpon>frmMaestroColaborador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RetailSoftRRHH\frmMaestroEvento.resx">
+      <DependentUpon>frmMaestroEvento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RetailSoftRRHH\frmMaestroPuestoTrabajo.resx">
+      <DependentUpon>frmMaestroPuestoTrabajo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RetailSoftRRHH\frmRRHHPrincipal.resx">
+      <DependentUpon>frmRRHHPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RetailSoftVentas\frmBusquedaCategorias.resx">
+      <DependentUpon>frmBusquedaCategorias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RetailSoftVentas\frmBusquedaProductos.resx">
+      <DependentUpon>frmBusquedaProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RetailSoftVentas\frmBusquedaProductosEnPromo.resx">
+      <DependentUpon>frmBusquedaProductosEnPromo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RetailSoftVentas\frmBusquedaVentas.resx">
+      <DependentUpon>frmBusquedaVentas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RetailSoftVentas\frmDatosCategoria.resx">
+      <DependentUpon>frmDatosCategoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RetailSoftVentas\frmDatosProductoEnPromo.resx">
+      <DependentUpon>frmDatosProductoEnPromo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RetailSoftVentas\frmDatosProductoSeleccionado.resx">
+      <DependentUpon>frmDatosProductoSeleccionado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RetailSoftVentas\frmDatosPromocion.resx">
+      <DependentUpon>frmDatosPromocion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RetailSoftVentas\frmFilaCategorias.resx">
+      <DependentUpon>frmFilaCategorias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RetailSoftVentas\frmFilaProducto.resx">
+      <DependentUpon>frmFilaProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RetailSoftVentas\frmFilaPromocion.resx">
+      <DependentUpon>frmFilaPromocion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RetailSoftVentas\frmGestionarPedidos.resx">
+      <DependentUpon>frmGestionarPedidos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RetailSoftVentas\frmGestionarVenta.resx">
+      <DependentUpon>frmGestionarVenta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RetailSoftVentas\frmMaestroCategorias.resx">
+      <DependentUpon>frmMaestroCategorias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RetailSoftVentas\frmMaestroPromociones.resx">
+      <DependentUpon>frmMaestroPromociones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RetailSoftVentas\frmMenuDeslizante.resx">
+      <DependentUpon>frmMenuDeslizante.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RetailSoftVentas\frmMenuVentas.resx">
+      <DependentUpon>frmMenuVentas.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Connected Services\LogisticaWS\LogisticaWS.wsdl" />
+    <None Include="Connected Services\LogisticaWS\LogisticaWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\LogisticaWS\RetailSoft.LogisticaWS.actualizarStockResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LogisticaWS\RetailSoft.LogisticaWS.almacen.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LogisticaWS\RetailSoft.LogisticaWS.almacenxVehiculo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LogisticaWS\RetailSoft.LogisticaWS.categoriaProducto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LogisticaWS\RetailSoft.LogisticaWS.criterioControlCalidad.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LogisticaWS\RetailSoft.LogisticaWS.eliminarAlmacenxVehiculoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LogisticaWS\RetailSoft.LogisticaWS.eliminarLoteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LogisticaWS\RetailSoft.LogisticaWS.eliminarProductoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LogisticaWS\RetailSoft.LogisticaWS.eliminarProveedorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LogisticaWS\RetailSoft.LogisticaWS.eliminarTransportistaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LogisticaWS\RetailSoft.LogisticaWS.insertarAlmacenResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LogisticaWS\RetailSoft.LogisticaWS.insertarAlmacenxVehiculoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LogisticaWS\RetailSoft.LogisticaWS.insertarCategoriaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LogisticaWS\RetailSoft.LogisticaWS.insertarLoteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LogisticaWS\RetailSoft.LogisticaWS.insertarProductoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LogisticaWS\RetailSoft.LogisticaWS.insertarPromocionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LogisticaWS\RetailSoft.LogisticaWS.insertarProveedorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LogisticaWS\RetailSoft.LogisticaWS.insertarTipoVehiculoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LogisticaWS\RetailSoft.LogisticaWS.insertarTransportistaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LogisticaWS\RetailSoft.LogisticaWS.insertarVehiculoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LogisticaWS\RetailSoft.LogisticaWS.listadoAlmacenResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LogisticaWS\RetailSoft.LogisticaWS.listadoAlmacenxVehiculoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LogisticaWS\RetailSoft.LogisticaWS.listadoAntiguosProveedoresResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LogisticaWS\RetailSoft.LogisticaWS.listadoProveedoresResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LogisticaWS\RetailSoft.LogisticaWS.listadoRecientesProveedoresResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LogisticaWS\RetailSoft.LogisticaWS.listadoTipoVehiculosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LogisticaWS\RetailSoft.LogisticaWS.listadoTransportistaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LogisticaWS\RetailSoft.LogisticaWS.listadoVehiculosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LogisticaWS\RetailSoft.LogisticaWS.listarCategoriasProductoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LogisticaWS\RetailSoft.LogisticaWS.listarCriteriosControlCalidadResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LogisticaWS\RetailSoft.LogisticaWS.listarLotesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LogisticaWS\RetailSoft.LogisticaWS.listarLotesXFechaCompraResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LogisticaWS\RetailSoft.LogisticaWS.listarLotesXFechaLlegadaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LogisticaWS\RetailSoft.LogisticaWS.listarLotesXIDProveedorAlmacenResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LogisticaWS\RetailSoft.LogisticaWS.listarLotesXProveedorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LogisticaWS\RetailSoft.LogisticaWS.listarLotexCriterioControlCalidadResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LogisticaWS\RetailSoft.LogisticaWS.listarMarcasProductoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LogisticaWS\RetailSoft.LogisticaWS.listarPorIdAlmacenResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LogisticaWS\RetailSoft.LogisticaWS.listarPorNombreProveedorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LogisticaWS\RetailSoft.LogisticaWS.listarProductosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LogisticaWS\RetailSoft.LogisticaWS.listarProductosxCategoriaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LogisticaWS\RetailSoft.LogisticaWS.listarProductosxIdNombreResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LogisticaWS\RetailSoft.LogisticaWS.listarProductosxMarcaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LogisticaWS\RetailSoft.LogisticaWS.listarProductosXPromocionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LogisticaWS\RetailSoft.LogisticaWS.listarPromocionesXCategoriaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LogisticaWS\RetailSoft.LogisticaWS.listarProveedorEntreFechasResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LogisticaWS\RetailSoft.LogisticaWS.listarSubcategoriasProductoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LogisticaWS\RetailSoft.LogisticaWS.listarSubcategoriasXCategoriaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LogisticaWS\RetailSoft.LogisticaWS.lote.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LogisticaWS\RetailSoft.LogisticaWS.lotexCriterioControlCalidad.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LogisticaWS\RetailSoft.LogisticaWS.marcaProducto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LogisticaWS\RetailSoft.LogisticaWS.modificarAlmacenResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LogisticaWS\RetailSoft.LogisticaWS.modificarAlmacenxVehiculoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LogisticaWS\RetailSoft.LogisticaWS.modificarCategoriaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LogisticaWS\RetailSoft.LogisticaWS.modificarLoteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LogisticaWS\RetailSoft.LogisticaWS.modificarProductoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LogisticaWS\RetailSoft.LogisticaWS.modificarProveedorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LogisticaWS\RetailSoft.LogisticaWS.modificarTransportistaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LogisticaWS\RetailSoft.LogisticaWS.producto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LogisticaWS\RetailSoft.LogisticaWS.productoxPromocion.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LogisticaWS\RetailSoft.LogisticaWS.promocion.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LogisticaWS\RetailSoft.LogisticaWS.proveedor.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LogisticaWS\RetailSoft.LogisticaWS.subcategoriaProducto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LogisticaWS\RetailSoft.LogisticaWS.tipoVehiculo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LogisticaWS\RetailSoft.LogisticaWS.transportista.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LogisticaWS\RetailSoft.LogisticaWS.vehiculo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ReporteWS\ReporteWS.wsdl" />
+    <None Include="Connected Services\ReporteWS\ReporteWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ReporteWS\RetailSoft.ReporteWS.generarReporteProveedoresResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\RRHHWS\RetailSoft.RRHHWS.actualizarAsistenciaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\RRHHWS\RetailSoft.RRHHWS.actualizarCandidatoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\RRHHWS\RetailSoft.RRHHWS.actualizarColaboradorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\RRHHWS\RetailSoft.RRHHWS.actualizarEventoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\RRHHWS\RetailSoft.RRHHWS.actualizarPuestoTrabajoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\RRHHWS\RetailSoft.RRHHWS.asistenciaColaborador.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\RRHHWS\RetailSoft.RRHHWS.beneficio.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\RRHHWS\RetailSoft.RRHHWS.beneficioxColaborador.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\RRHHWS\RetailSoft.RRHHWS.candidato.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\RRHHWS\RetailSoft.RRHHWS.cargo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\RRHHWS\RetailSoft.RRHHWS.colaborador.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\RRHHWS\RetailSoft.RRHHWS.colaboradorxEvento.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\RRHHWS\RetailSoft.RRHHWS.eliminarBeneficioXColaboradorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\RRHHWS\RetailSoft.RRHHWS.eliminarColaboradorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\RRHHWS\RetailSoft.RRHHWS.eliminarColaboradorXEventoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\RRHHWS\RetailSoft.RRHHWS.eliminarEventoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\RRHHWS\RetailSoft.RRHHWS.eliminarPuestoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\RRHHWS\RetailSoft.RRHHWS.eliminarSalarioResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\RRHHWS\RetailSoft.RRHHWS.estadoCandidato.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\RRHHWS\RetailSoft.RRHHWS.evento.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\RRHHWS\RetailSoft.RRHHWS.getSalarioPorIdColaboradorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\RRHHWS\RetailSoft.RRHHWS.insertarAsistenciaColaboradorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\RRHHWS\RetailSoft.RRHHWS.insertarBeneficioxColaboradorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\RRHHWS\RetailSoft.RRHHWS.insertarCandidatoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\RRHHWS\RetailSoft.RRHHWS.insertarColaboradorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\RRHHWS\RetailSoft.RRHHWS.insertarColaboradorXEventoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\RRHHWS\RetailSoft.RRHHWS.insertarEventoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\RRHHWS\RetailSoft.RRHHWS.insertarPuestoTrabajoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\RRHHWS\RetailSoft.RRHHWS.insertarSalarioResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\RRHHWS\RetailSoft.RRHHWS.insertarTrazabilidadCandidatoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\RRHHWS\RetailSoft.RRHHWS.listarAsistenciaPorColaboradorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\RRHHWS\RetailSoft.RRHHWS.listarAsistenciasResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\RRHHWS\RetailSoft.RRHHWS.listarBeneficiosPorIdColaboradorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\RRHHWS\RetailSoft.RRHHWS.listarBeneficiosTodosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\RRHHWS\RetailSoft.RRHHWS.listarCandidatosXidPuestoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\RRHHWS\RetailSoft.RRHHWS.listarCandidatosXnombreDNIidPuestoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\RRHHWS\RetailSoft.RRHHWS.listarColaboradoresPorApellidoDescResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\RRHHWS\RetailSoft.RRHHWS.listarColaboradoresPorDNIDescResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\RRHHWS\RetailSoft.RRHHWS.listarColaboradoresPorDNINombreResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\RRHHWS\RetailSoft.RRHHWS.listarColaboradoresPorIdCargoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\RRHHWS\RetailSoft.RRHHWS.listarColaboradoresPorIdEventoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\RRHHWS\RetailSoft.RRHHWS.listarColaboradoresTodosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\RRHHWS\RetailSoft.RRHHWS.listarEstadosCandidatoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\RRHHWS\RetailSoft.RRHHWS.listarEventosPorFechaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\RRHHWS\RetailSoft.RRHHWS.listarEventosPorNombreResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\RRHHWS\RetailSoft.RRHHWS.listarEventosTodosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\RRHHWS\RetailSoft.RRHHWS.listarPuestosPorFechaLimiteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\RRHHWS\RetailSoft.RRHHWS.listarPuestosPorFechaPublicacionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\RRHHWS\RetailSoft.RRHHWS.listarPuestosPorNombreResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\RRHHWS\RetailSoft.RRHHWS.listarPuestosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\RRHHWS\RetailSoft.RRHHWS.listarTodosCargosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\RRHHWS\RetailSoft.RRHHWS.listarTrazaActualIdCandidatoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\RRHHWS\RetailSoft.RRHHWS.listarTrazaXIdCandidatoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\RRHHWS\RetailSoft.RRHHWS.puestoTrabajo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\RRHHWS\RetailSoft.RRHHWS.salario.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\RRHHWS\RetailSoft.RRHHWS.trazabilidadCandidato.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\RRHHWS\RetailSoft.RRHHWS.verificarCuentaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\RRHHWS\RRHHWS.wsdl" />
+    <None Include="Connected Services\RRHHWS\RRHHWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\VentasWS\RetailSoft.VentasWS.insertarVentaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\VentasWS\RetailSoft.VentasWS.lineaVenta.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\VentasWS\RetailSoft.VentasWS.listarVentasXIdDNIClienteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\VentasWS\RetailSoft.VentasWS.listarVentasXIdVentaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\VentasWS\RetailSoft.VentasWS.venta.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\VentasWS\VentasWS.wsdl" />
+    <None Include="Connected Services\VentasWS\VentasWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PerfilHombre1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RRHH.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Nuevo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Guardar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Buscar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PerfilHombre.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icono_control_calidad.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icono_lote.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icono_producto.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icono_logistica.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AlmacenIa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\conductor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\proveedor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Guardar1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\almacen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\repartidor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\almacenes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icono_eliminar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\correo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\atras.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pregunta.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\crear.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\LogisticaWS\" />
+    <WCFMetadataStorage Include="Connected Services\ReporteWS\" />
+    <WCFMetadataStorage Include="Connected Services\RRHHWS\" />
+    <WCFMetadataStorage Include="Connected Services\VentasWS\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\RRHHWS\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\RRHHWS\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\RRHHWS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\LogisticaWS\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\LogisticaWS\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\LogisticaWS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\upload.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\subir.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\evento.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\correo1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\VentasWS\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\VentasWS\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\VentasWS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Menu1.png" />
+    <None Include="Resources\inicio.png" />
+    <None Include="Resources\Transportista.jpg" />
+    <None Include="Resources\Portada.png" />
+    <None Include="Resources\IconoAlmacen.png" />
+    <None Include="Resources\GestionProveedor.png" />
+    <None Include="Resources\Proveedor1.png" />
+    <None Include="Resources\GestionLotes.png" />
+    <None Include="Resources\Productos.png" />
+    <None Include="Resources\Ventas.png" />
+    <None Include="Resources\RRHH1.png" />
+    <None Include="Resources\eventos.png" />
+    <None Include="Resources\reclutamiento.png" />
+    <None Include="Resources\organizacion.png" />
+    <None Include="Resources\GestColabs.png" />
+    <None Include="Resources\carrito.png" />
+    <None Include="Resources\archivoSubido.png" />
+    <None Include="Resources\Colaboradores.png" />
+    <None Include="Resources\asistencias.png" />
+    <None Include="Resources\cadena-de-suministro %281%29.png" />
+    <None Include="Resources\Almacen1.png" />
+    <None Include="Connected Services\ReporteWS\configuration91.svcinfo" />
+    <None Include="Connected Services\ReporteWS\configuration.svcinfo" />
+    <None Include="Connected Services\ReporteWS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Resources\btnCat.png" />
+    <None Include="Resources\btnSalir.png" />
+    <None Include="Resources\btnPromo1.png" />
+    <Content Include="Resources\Eliminar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AcroPDFLib">
+      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="AxAcroPDFLib">
+      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,873 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://services.retailsoft.pucp.org/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" name="RRHHWS" targetNamespace="http://services.retailsoft.pucp.org/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://localhost:8080/RetailSoftWebServices/RRHHWS?xsd=1" namespace="http://services.retailsoft.pucp.org/" />
+    </xsd:schema>
+  </types>
+  <message name="listarCandidatosXnombreDNIidPuesto">
+    <part name="parameters" element="tns:listarCandidatosXnombreDNIidPuesto" />
+  </message>
+  <message name="listarCandidatosXnombreDNIidPuestoResponse">
+    <part name="parameters" element="tns:listarCandidatosXnombreDNIidPuestoResponse" />
+  </message>
+  <message name="listarColaboradoresPorApellidoDesc">
+    <part name="parameters" element="tns:listarColaboradoresPorApellidoDesc" />
+  </message>
+  <message name="listarColaboradoresPorApellidoDescResponse">
+    <part name="parameters" element="tns:listarColaboradoresPorApellidoDescResponse" />
+  </message>
+  <message name="listarAsistencias">
+    <part name="parameters" element="tns:listarAsistencias" />
+  </message>
+  <message name="listarAsistenciasResponse">
+    <part name="parameters" element="tns:listarAsistenciasResponse" />
+  </message>
+  <message name="insertarCandidato">
+    <part name="parameters" element="tns:insertarCandidato" />
+  </message>
+  <message name="insertarCandidatoResponse">
+    <part name="parameters" element="tns:insertarCandidatoResponse" />
+  </message>
+  <message name="insertarTrazabilidadCandidato">
+    <part name="parameters" element="tns:insertarTrazabilidadCandidato" />
+  </message>
+  <message name="insertarTrazabilidadCandidatoResponse">
+    <part name="parameters" element="tns:insertarTrazabilidadCandidatoResponse" />
+  </message>
+  <message name="listarTrazaActualIdCandidato">
+    <part name="parameters" element="tns:listarTrazaActualIdCandidato" />
+  </message>
+  <message name="listarTrazaActualIdCandidatoResponse">
+    <part name="parameters" element="tns:listarTrazaActualIdCandidatoResponse" />
+  </message>
+  <message name="listarCandidatosXidPuesto">
+    <part name="parameters" element="tns:listarCandidatosXidPuesto" />
+  </message>
+  <message name="listarCandidatosXidPuestoResponse">
+    <part name="parameters" element="tns:listarCandidatosXidPuestoResponse" />
+  </message>
+  <message name="insertarAsistenciaColaborador">
+    <part name="parameters" element="tns:insertarAsistenciaColaborador" />
+  </message>
+  <message name="insertarAsistenciaColaboradorResponse">
+    <part name="parameters" element="tns:insertarAsistenciaColaboradorResponse" />
+  </message>
+  <message name="listarAsistenciaPorColaborador">
+    <part name="parameters" element="tns:listarAsistenciaPorColaborador" />
+  </message>
+  <message name="listarAsistenciaPorColaboradorResponse">
+    <part name="parameters" element="tns:listarAsistenciaPorColaboradorResponse" />
+  </message>
+  <message name="actualizarAsistencia">
+    <part name="parameters" element="tns:actualizarAsistencia" />
+  </message>
+  <message name="actualizarAsistenciaResponse">
+    <part name="parameters" element="tns:actualizarAsistenciaResponse" />
+  </message>
+  <message name="insertarPuestoTrabajo">
+    <part name="parameters" element="tns:insertarPuestoTrabajo" />
+  </message>
+  <message name="insertarPuestoTrabajoResponse">
+    <part name="parameters" element="tns:insertarPuestoTrabajoResponse" />
+  </message>
+  <message name="listarPuestosPorNombre">
+    <part name="parameters" element="tns:listarPuestosPorNombre" />
+  </message>
+  <message name="listarPuestosPorNombreResponse">
+    <part name="parameters" element="tns:listarPuestosPorNombreResponse" />
+  </message>
+  <message name="listarEstadosCandidato">
+    <part name="parameters" element="tns:listarEstadosCandidato" />
+  </message>
+  <message name="listarEstadosCandidatoResponse">
+    <part name="parameters" element="tns:listarEstadosCandidatoResponse" />
+  </message>
+  <message name="listarPuestosPorFechaPublicacion">
+    <part name="parameters" element="tns:listarPuestosPorFechaPublicacion" />
+  </message>
+  <message name="listarPuestosPorFechaPublicacionResponse">
+    <part name="parameters" element="tns:listarPuestosPorFechaPublicacionResponse" />
+  </message>
+  <message name="listarTrazaXIdCandidato">
+    <part name="parameters" element="tns:listarTrazaXIdCandidato" />
+  </message>
+  <message name="listarTrazaXIdCandidatoResponse">
+    <part name="parameters" element="tns:listarTrazaXIdCandidatoResponse" />
+  </message>
+  <message name="listarPuestosPorFechaLimite">
+    <part name="parameters" element="tns:listarPuestosPorFechaLimite" />
+  </message>
+  <message name="listarPuestosPorFechaLimiteResponse">
+    <part name="parameters" element="tns:listarPuestosPorFechaLimiteResponse" />
+  </message>
+  <message name="actualizarPuestoTrabajo">
+    <part name="parameters" element="tns:actualizarPuestoTrabajo" />
+  </message>
+  <message name="actualizarPuestoTrabajoResponse">
+    <part name="parameters" element="tns:actualizarPuestoTrabajoResponse" />
+  </message>
+  <message name="actualizarCandidato">
+    <part name="parameters" element="tns:actualizarCandidato" />
+  </message>
+  <message name="actualizarCandidatoResponse">
+    <part name="parameters" element="tns:actualizarCandidatoResponse" />
+  </message>
+  <message name="insertarSalario">
+    <part name="parameters" element="tns:insertarSalario" />
+  </message>
+  <message name="insertarSalarioResponse">
+    <part name="parameters" element="tns:insertarSalarioResponse" />
+  </message>
+  <message name="eliminarSalario">
+    <part name="parameters" element="tns:eliminarSalario" />
+  </message>
+  <message name="eliminarSalarioResponse">
+    <part name="parameters" element="tns:eliminarSalarioResponse" />
+  </message>
+  <message name="insertarEvento">
+    <part name="parameters" element="tns:insertarEvento" />
+  </message>
+  <message name="insertarEventoResponse">
+    <part name="parameters" element="tns:insertarEventoResponse" />
+  </message>
+  <message name="actualizarEvento">
+    <part name="parameters" element="tns:actualizarEvento" />
+  </message>
+  <message name="actualizarEventoResponse">
+    <part name="parameters" element="tns:actualizarEventoResponse" />
+  </message>
+  <message name="listarPuestos">
+    <part name="parameters" element="tns:listarPuestos" />
+  </message>
+  <message name="listarPuestosResponse">
+    <part name="parameters" element="tns:listarPuestosResponse" />
+  </message>
+  <message name="verificarCuenta">
+    <part name="parameters" element="tns:verificarCuenta" />
+  </message>
+  <message name="verificarCuentaResponse">
+    <part name="parameters" element="tns:verificarCuentaResponse" />
+  </message>
+  <message name="eliminarEvento">
+    <part name="parameters" element="tns:eliminarEvento" />
+  </message>
+  <message name="eliminarEventoResponse">
+    <part name="parameters" element="tns:eliminarEventoResponse" />
+  </message>
+  <message name="eliminarPuesto">
+    <part name="parameters" element="tns:eliminarPuesto" />
+  </message>
+  <message name="eliminarPuestoResponse">
+    <part name="parameters" element="tns:eliminarPuestoResponse" />
+  </message>
+  <message name="insertarColaborador">
+    <part name="parameters" element="tns:insertarColaborador" />
+  </message>
+  <message name="insertarColaboradorResponse">
+    <part name="parameters" element="tns:insertarColaboradorResponse" />
+  </message>
+  <message name="listarTodosCargos">
+    <part name="parameters" element="tns:listarTodosCargos" />
+  </message>
+  <message name="listarTodosCargosResponse">
+    <part name="parameters" element="tns:listarTodosCargosResponse" />
+  </message>
+  <message name="listarColaboradoresPorDNINombre">
+    <part name="parameters" element="tns:listarColaboradoresPorDNINombre" />
+  </message>
+  <message name="listarColaboradoresPorDNINombreResponse">
+    <part name="parameters" element="tns:listarColaboradoresPorDNINombreResponse" />
+  </message>
+  <message name="listarBeneficiosTodos">
+    <part name="parameters" element="tns:listarBeneficiosTodos" />
+  </message>
+  <message name="listarBeneficiosTodosResponse">
+    <part name="parameters" element="tns:listarBeneficiosTodosResponse" />
+  </message>
+  <message name="listarBeneficiosPorIdColaborador">
+    <part name="parameters" element="tns:listarBeneficiosPorIdColaborador" />
+  </message>
+  <message name="listarBeneficiosPorIdColaboradorResponse">
+    <part name="parameters" element="tns:listarBeneficiosPorIdColaboradorResponse" />
+  </message>
+  <message name="listarColaboradoresPorIdEvento">
+    <part name="parameters" element="tns:listarColaboradoresPorIdEvento" />
+  </message>
+  <message name="listarColaboradoresPorIdEventoResponse">
+    <part name="parameters" element="tns:listarColaboradoresPorIdEventoResponse" />
+  </message>
+  <message name="eliminarBeneficioXColaborador">
+    <part name="parameters" element="tns:eliminarBeneficioXColaborador" />
+  </message>
+  <message name="eliminarBeneficioXColaboradorResponse">
+    <part name="parameters" element="tns:eliminarBeneficioXColaboradorResponse" />
+  </message>
+  <message name="listarColaboradoresTodos">
+    <part name="parameters" element="tns:listarColaboradoresTodos" />
+  </message>
+  <message name="listarColaboradoresTodosResponse">
+    <part name="parameters" element="tns:listarColaboradoresTodosResponse" />
+  </message>
+  <message name="listarEventosTodos">
+    <part name="parameters" element="tns:listarEventosTodos" />
+  </message>
+  <message name="listarEventosTodosResponse">
+    <part name="parameters" element="tns:listarEventosTodosResponse" />
+  </message>
+  <message name="insertarBeneficioxColaborador">
+    <part name="parameters" element="tns:insertarBeneficioxColaborador" />
+  </message>
+  <message name="insertarBeneficioxColaboradorResponse">
+    <part name="parameters" element="tns:insertarBeneficioxColaboradorResponse" />
+  </message>
+  <message name="listarColaboradoresPorIdCargo">
+    <part name="parameters" element="tns:listarColaboradoresPorIdCargo" />
+  </message>
+  <message name="listarColaboradoresPorIdCargoResponse">
+    <part name="parameters" element="tns:listarColaboradoresPorIdCargoResponse" />
+  </message>
+  <message name="eliminarColaboradorXEvento">
+    <part name="parameters" element="tns:eliminarColaboradorXEvento" />
+  </message>
+  <message name="eliminarColaboradorXEventoResponse">
+    <part name="parameters" element="tns:eliminarColaboradorXEventoResponse" />
+  </message>
+  <message name="eliminarColaborador">
+    <part name="parameters" element="tns:eliminarColaborador" />
+  </message>
+  <message name="eliminarColaboradorResponse">
+    <part name="parameters" element="tns:eliminarColaboradorResponse" />
+  </message>
+  <message name="getSalarioPorIdColaborador">
+    <part name="parameters" element="tns:getSalarioPorIdColaborador" />
+  </message>
+  <message name="getSalarioPorIdColaboradorResponse">
+    <part name="parameters" element="tns:getSalarioPorIdColaboradorResponse" />
+  </message>
+  <message name="listarEventosPorNombre">
+    <part name="parameters" element="tns:listarEventosPorNombre" />
+  </message>
+  <message name="listarEventosPorNombreResponse">
+    <part name="parameters" element="tns:listarEventosPorNombreResponse" />
+  </message>
+  <message name="insertarColaboradorXEvento">
+    <part name="parameters" element="tns:insertarColaboradorXEvento" />
+  </message>
+  <message name="insertarColaboradorXEventoResponse">
+    <part name="parameters" element="tns:insertarColaboradorXEventoResponse" />
+  </message>
+  <message name="listarEventosPorFecha">
+    <part name="parameters" element="tns:listarEventosPorFecha" />
+  </message>
+  <message name="listarEventosPorFechaResponse">
+    <part name="parameters" element="tns:listarEventosPorFechaResponse" />
+  </message>
+  <message name="listarColaboradoresPorDNIDesc">
+    <part name="parameters" element="tns:listarColaboradoresPorDNIDesc" />
+  </message>
+  <message name="listarColaboradoresPorDNIDescResponse">
+    <part name="parameters" element="tns:listarColaboradoresPorDNIDescResponse" />
+  </message>
+  <message name="actualizarColaborador">
+    <part name="parameters" element="tns:actualizarColaborador" />
+  </message>
+  <message name="actualizarColaboradorResponse">
+    <part name="parameters" element="tns:actualizarColaboradorResponse" />
+  </message>
+  <portType name="RRHHWS">
+    <operation name="listarCandidatosXnombreDNIidPuesto">
+      <input wsam:Action="http://services.retailsoft.pucp.org/RRHHWS/listarCandidatosXnombreDNIidPuestoRequest" message="tns:listarCandidatosXnombreDNIidPuesto" />
+      <output wsam:Action="http://services.retailsoft.pucp.org/RRHHWS/listarCandidatosXnombreDNIidPuestoResponse" message="tns:listarCandidatosXnombreDNIidPuestoResponse" />
+    </operation>
+    <operation name="listarColaboradoresPorApellidoDesc">
+      <input wsam:Action="http://services.retailsoft.pucp.org/RRHHWS/listarColaboradoresPorApellidoDescRequest" message="tns:listarColaboradoresPorApellidoDesc" />
+      <output wsam:Action="http://services.retailsoft.pucp.org/RRHHWS/listarColaboradoresPorApellidoDescResponse" message="tns:listarColaboradoresPorApellidoDescResponse" />
+    </operation>
+    <operation name="listarAsistencias">
+      <input wsam:Action="http://services.retailsoft.pucp.org/RRHHWS/listarAsistenciasRequest" message="tns:listarAsistencias" />
+      <output wsam:Action="http://services.retailsoft.pucp.org/RRHHWS/listarAsistenciasResponse" message="tns:listarAsistenciasResponse" />
+    </operation>
+    <operation name="insertarCandidato">
+      <input wsam:Action="http://services.retailsoft.pucp.org/RRHHWS/insertarCandidatoRequest" message="tns:insertarCandidato" />
+      <output wsam:Action="http://services.retailsoft.pucp.org/RRHHWS/insertarCandidatoResponse" message="tns:insertarCandidatoResponse" />
+    </operation>
+    <operation name="insertarTrazabilidadCandidato">
+      <input wsam:Action="http://services.retailsoft.pucp.org/RRHHWS/insertarTrazabilidadCandidatoRequest" message="tns:insertarTrazabilidadCandidato" />
+      <output wsam:Action="http://services.retailsoft.pucp.org/RRHHWS/insertarTrazabilidadCandidatoResponse" message="tns:insertarTrazabilidadCandidatoResponse" />
+    </operation>
+    <operation name="listarTrazaActualIdCandidato">
+      <input wsam:Action="http://services.retailsoft.pucp.org/RRHHWS/listarTrazaActualIdCandidatoRequest" message="tns:listarTrazaActualIdCandidato" />
+      <output wsam:Action="http://services.retailsoft.pucp.org/RRHHWS/listarTrazaActualIdCandidatoResponse" message="tns:listarTrazaActualIdCandidatoResponse" />
+    </operation>
+    <operation name="listarCandidatosXidPuesto">
+      <input wsam:Action="http://services.retailsoft.pucp.org/RRHHWS/listarCandidatosXidPuestoRequest" message="tns:listarCandidatosXidPuesto" />
+      <output wsam:Action="http://services.retailsoft.pucp.org/RRHHWS/listarCandidatosXidPuestoResponse" message="tns:listarCandidatosXidPuestoResponse" />
+    </operation>
+    <operation name="insertarAsistenciaColaborador">
+      <input wsam:Action="http://services.retailsoft.pucp.org/RRHHWS/insertarAsistenciaColaboradorRequest" message="tns:insertarAsistenciaColaborador" />
+      <output wsam:Action="http://services.retailsoft.pucp.org/RRHHWS/insertarAsistenciaColaboradorResponse" message="tns:insertarAsistenciaColaboradorResponse" />
+    </operation>
+    <operation name="listarAsistenciaPorColaborador">
+      <input wsam:Action="http://services.retailsoft.pucp.org/RRHHWS/listarAsistenciaPorColaboradorRequest" message="tns:listarAsistenciaPorColaborador" />
+      <output wsam:Action="http://services.retailsoft.pucp.org/RRHHWS/listarAsistenciaPorColaboradorResponse" message="tns:listarAsistenciaPorColaboradorResponse" />
+    </operation>
+    <operation name="actualizarAsistencia">
+      <input wsam:Action="http://services.retailsoft.pucp.org/RRHHWS/actualizarAsistenciaRequest" message="tns:actualizarAsistencia" />
+      <output wsam:Action="http://services.retailsoft.pucp.org/RRHHWS/actualizarAsistenciaResponse" message="tns:actualizarAsistenciaResponse" />
+    </operation>
+    <operation name="insertarPuestoTrabajo">
+      <input wsam:Action="http://services.retailsoft.pucp.org/RRHHWS/insertarPuestoTrabajoRequest" message="tns:insertarPuestoTrabajo" />
+      <output wsam:Action="http://services.retailsoft.pucp.org/RRHHWS/insertarPuestoTrabajoResponse" message="tns:insertarPuestoTrabajoResponse" />
+    </operation>
+    <operation name="listarPuestosPorNombre">
+      <input wsam:Action="http://services.retailsoft.pucp.org/RRHHWS/listarPuestosPorNombreRequest" message="tns:listarPuestosPorNombre" />
+      <output wsam:Action="http://services.retailsoft.pucp.org/RRHHWS/listarPuestosPorNombreResponse" message="tns:listarPuestosPorNombreResponse" />
+    </operation>
+    <operation name="listarEstadosCandidato">
+      <input wsam:Action="http://services.retailsoft.pucp.org/RRHHWS/listarEstadosCandidatoRequest" message="tns:listarEstadosCandidato" />
+      <output wsam:Action="http://services.retailsoft.pucp.org/RRHHWS/listarEstadosCandidatoResponse" message="tns:listarEstadosCandidatoResponse" />
+    </operation>
+    <operation name="listarPuestosPorFechaPublicacion">
+      <input wsam:Action="http://services.retailsoft.pucp.org/RRHHWS/listarPuestosPorFechaPublicacionRequest" message="tns:listarPuestosPorFechaPublicacion" />
+      <output wsam:Action="http://services.retailsoft.pucp.org/RRHHWS/listarPuestosPorFechaPublicacionResponse" message="tns:listarPuestosPorFechaPublicacionResponse" />
+    </operation>
+    <operation name="listarTrazaXIdCandidato">
+      <input wsam:Action="http://services.retailsoft.pucp.org/RRHHWS/listarTrazaXIdCandidatoRequest" message="tns:listarTrazaXIdCandidato" />
+      <output wsam:Action="http://services.retailsoft.pucp.org/RRHHWS/listarTrazaXIdCandidatoResponse" message="tns:listarTrazaXIdCandidatoResponse" />
+    </operation>
+    <operation name="listarPuestosPorFechaLimite">
+      <input wsam:Action="http://services.retailsoft.pucp.org/RRHHWS/listarPuestosPorFechaLimiteRequest" message="tns:listarPuestosPorFechaLimite" />
+      <output wsam:Action="http://services.retailsoft.pucp.org/RRHHWS/listarPuestosPorFechaLimiteResponse" message="tns:listarPuestosPorFechaLimiteResponse" />
+    </operation>
+    <operation name="actualizarPuestoTrabajo">
+      <input wsam:Action="http://services.retailsoft.pucp.org/RRHHWS/actualizarPuestoTrabajoRequest" message="tns:actualizarPuestoTrabajo" />
+      <output wsam:Action="http://services.retailsoft.pucp.org/RRHHWS/actualizarPuestoTrabajoResponse" message="tns:actualizarPuestoTrabajoResponse" />
+    </operation>
+    <operation name="actualizarCandidato">
+      <input wsam:Action="http://services.retailsoft.pucp.org/RRHHWS/actualizarCandidatoRequest" message="tns:actualizarCandidato" />
+      <output wsam:Action="http://services.retailsoft.pucp.org/RRHHWS/actualizarCandidatoResponse" message="tns:actualizarCandidatoResponse" />
+    </operation>
+    <operation name="insertarSalario">
+      <input wsam:Action="http://services.retailsoft.pucp.org/RRHHWS/insertarSalarioRequest" message="tns:insertarSalario" />
+      <output wsam:Action="http://services.retailsoft.pucp.org/RRHHWS/insertarSalarioResponse" message="tns:insertarSalarioResponse" />
+    </operation>
+    <operation name="eliminarSalario">
+      <input wsam:Action="http://services.retailsoft.pucp.org/RRHHWS/eliminarSalarioRequest" message="tns:eliminarSalario" />
+      <output wsam:Action="http://services.retailsoft.pucp.org/RRHHWS/eliminarSalarioResponse" message="tns:eliminarSalarioResponse" />
+    </operation>
+    <operation name="insertarEvento">
+      <input wsam:Action="http://services.retailsoft.pucp.org/RRHHWS/insertarEventoRequest" message="tns:insertarEvento" />
+      <output wsam:Action="http://services.retailsoft.pucp.org/RRHHWS/insertarEventoResponse" message="tns:insertarEventoResponse" />
+    </operation>
+    <operation name="actualizarEvento">
+      <input wsam:Action="http://services.retailsoft.pucp.org/RRHHWS/actualizarEventoRequest" message="tns:actualizarEvento" />
+      <output wsam:Action="http://services.retailsoft.pucp.org/RRHHWS/actualizarEventoResponse" message="tns:actualizarEventoResponse" />
+    </operation>
+    <operation name="listarPuestos">
+      <input wsam:Action="http://services.retailsoft.pucp.org/RRHHWS/listarPuestosRequest" message="tns:listarPuestos" />
+      <output wsam:Action="http://services.retailsoft.pucp.org/RRHHWS/listarPuestosResponse" message="tns:listarPuestosResponse" />
+    </operation>
+    <operation name="verificarCuenta">
+      <input wsam:Action="http://services.retailsoft.pucp.org/RRHHWS/verificarCuentaRequest" message="tns:verificarCuenta" />
+      <output wsam:Action="http://services.retailsoft.pucp.org/RRHHWS/verificarCuentaResponse" message="tns:verificarCuentaResponse" />
+    </operation>
+    <operation name="eliminarEvento">
+      <input wsam:Action="http://services.retailsoft.pucp.org/RRHHWS/eliminarEventoRequest" message="tns:eliminarEvento" />
+      <output wsam:Action="http://services.retailsoft.pucp.org/RRHHWS/eliminarEventoResponse" message="tns:eliminarEventoResponse" />
+    </operation>
+    <operation name="eliminarPuesto">
+      <input wsam:Action="http://services.retailsoft.pucp.org/RRHHWS/eliminarPuestoRequest" message="tns:eliminarPuesto" />
+      <output wsam:Action="http://services.retailsoft.pucp.org/RRHHWS/eliminarPuestoResponse" message="tns:eliminarPuestoResponse" />
+    </operation>
+    <operation name="insertarColaborador">
+      <input wsam:Action="http://services.retailsoft.pucp.org/RRHHWS/insertarColaboradorRequest" message="tns:insertarColaborador" />
+      <output wsam:Action="http://services.retailsoft.pucp.org/RRHHWS/insertarColaboradorResponse" message="tns:insertarColaboradorResponse" />
+    </operation>
+    <operation name="listarTodosCargos">
+      <input wsam:Action="http://services.retailsoft.pucp.org/RRHHWS/listarTodosCargosRequest" message="tns:listarTodosCargos" />
+      <output wsam:Action="http://services.retailsoft.pucp.org/RRHHWS/listarTodosCargosResponse" message="tns:listarTodosCargosResponse" />
+    </operation>
+    <operation name="listarColaboradoresPorDNINombre">
+      <input wsam:Action="http://services.retailsoft.pucp.org/RRHHWS/listarColaboradoresPorDNINombreRequest" message="tns:listarColaboradoresPorDNINombre" />
+      <output wsam:Action="http://services.retailsoft.pucp.org/RRHHWS/listarColaboradoresPorDNINombreResponse" message="tns:listarColaboradoresPorDNINombreResponse" />
+    </operation>
+    <operation name="listarBeneficiosTodos">
+      <input wsam:Action="http://services.retailsoft.pucp.org/RRHHWS/listarBeneficiosTodosRequest" message="tns:listarBeneficiosTodos" />
+      <output wsam:Action="http://services.retailsoft.pucp.org/RRHHWS/listarBeneficiosTodosResponse" message="tns:listarBeneficiosTodosResponse" />
+    </operation>
+    <operation name="listarBeneficiosPorIdColaborador">
+      <input wsam:Action="http://services.retailsoft.pucp.org/RRHHWS/listarBeneficiosPorIdColaboradorRequest" message="tns:listarBeneficiosPorIdColaborador" />
+      <output wsam:Action="http://services.retailsoft.pucp.org/RRHHWS/listarBeneficiosPorIdColaboradorResponse" message="tns:listarBeneficiosPorIdColaboradorResponse" />
+    </operation>
+    <operation name="listarColaboradoresPorIdEvento">
+      <input wsam:Action="http://services.retailsoft.pucp.org/RRHHWS/listarColaboradoresPorIdEventoRequest" message="tns:listarColaboradoresPorIdEvento" />
+      <output wsam:Action="http://services.retailsoft.pucp.org/RRHHWS/listarColaboradoresPorIdEventoResponse" message="tns:listarColaboradoresPorIdEventoResponse" />
+    </operation>
+    <operation name="eliminarBeneficioXColaborador">
+      <input wsam:Action="http://services.retailsoft.pucp.org/RRHHWS/eliminarBeneficioXColaboradorRequest" message="tns:eliminarBeneficioXColaborador" />
+      <output wsam:Action="http://services.retailsoft.pucp.org/RRHHWS/eliminarBeneficioXColaboradorResponse" message="tns:eliminarBeneficioXColaboradorResponse" />
+    </operation>
+    <operation name="listarColaboradoresTodos">
+      <input wsam:Action="http://services.retailsoft.pucp.org/RRHHWS/listarColaboradoresTodosRequest" message="tns:listarColaboradoresTodos" />
+      <output wsam:Action="http://services.retailsoft.pucp.org/RRHHWS/listarColaboradoresTodosResponse" message="tns:listarColaboradoresTodosResponse" />
+    </operation>
+    <operation name="listarEventosTodos">
+      <input wsam:Action="http://services.retailsoft.pucp.org/RRHHWS/listarEventosTodosRequest" message="tns:listarEventosTodos" />
+      <output wsam:Action="http://services.retailsoft.pucp.org/RRHHWS/listarEventosTodosResponse" message="tns:listarEventosTodosResponse" />
+    </operation>
+    <operation name="insertarBeneficioxColaborador">
+      <input wsam:Action="http://services.retailsoft.pucp.org/RRHHWS/insertarBeneficioxColaboradorRequest" message="tns:insertarBeneficioxColaborador" />
+      <output wsam:Action="http://services.retailsoft.pucp.org/RRHHWS/insertarBeneficioxColaboradorResponse" message="tns:insertarBeneficioxColaboradorResponse" />
+    </operation>
+    <operation name="listarColaboradoresPorIdCargo">
+      <input wsam:Action="http://services.retailsoft.pucp.org/RRHHWS/listarColaboradoresPorIdCargoRequest" message="tns:listarColaboradoresPorIdCargo" />
+      <output wsam:Action="http://services.retailsoft.pucp.org/RRHHWS/listarColaboradoresPorIdCargoResponse" message="tns:listarColaboradoresPorIdCargoResponse" />
+    </operation>
+    <operation name="eliminarColaboradorXEvento">
+      <input wsam:Action="http://services.retailsoft.pucp.org/RRHHWS/eliminarColaboradorXEventoRequest" message="tns:eliminarColaboradorXEvento" />
+      <output wsam:Action="http://services.retailsoft.pucp.org/RRHHWS/eliminarColaboradorXEventoResponse" message="tns:eliminarColaboradorXEventoResponse" />
+    </operation>
+    <operation name="eliminarColaborador">
+      <input wsam:Action="http://services.retailsoft.pucp.org/RRHHWS/eliminarColaboradorRequest" message="tns:eliminarColaborador" />
+      <output wsam:Action="http://services.retailsoft.pucp.org/RRHHWS/eliminarColaboradorResponse" message="tns:eliminarColaboradorResponse" />
+    </operation>
+    <operation name="getSalarioPorIdColaborador">
+      <input wsam:Action="http://services.retailsoft.pucp.org/RRHHWS/getSalarioPorIdColaboradorRequest" message="tns:getSalarioPorIdColaborador" />
+      <output wsam:Action="http://services.retailsoft.pucp.org/RRHHWS/getSalarioPorIdColaboradorResponse" message="tns:getSalarioPorIdColaboradorResponse" />
+    </operation>
+    <operation name="listarEventosPorNombre">
+      <input wsam:Action="http://services.retailsoft.pucp.org/RRHHWS/listarEventosPorNombreRequest" message="tns:listarEventosPorNombre" />
+      <output wsam:Action="http://services.retailsoft.pucp.org/RRHHWS/listarEventosPorNombreResponse" message="tns:listarEventosPorNombreResponse" />
+    </operation>
+    <operation name="insertarColaboradorXEvento">
+      <input wsam:Action="http://services.retailsoft.pucp.org/RRHHWS/insertarColaboradorXEventoRequest" message="tns:insertarColaboradorXEvento" />
+      <output wsam:Action="http://services.retailsoft.pucp.org/RRHHWS/insertarColaboradorXEventoResponse" message="tns:insertarColaboradorXEventoResponse" />
+    </operation>
+    <operation name="listarEventosPorFecha">
+      <input wsam:Action="http://services.retailsoft.pucp.org/RRHHWS/listarEventosPorFechaRequest" message="tns:listarEventosPorFecha" />
+      <output wsam:Action="http://services.retailsoft.pucp.org/RRHHWS/listarEventosPorFechaResponse" message="tns:listarEventosPorFechaResponse" />
+    </operation>
+    <operation name="listarColaboradoresPorDNIDesc">
+      <input wsam:Action="http://services.retailsoft.pucp.org/RRHHWS/listarColaboradoresPorDNIDescRequest" message="tns:listarColaboradoresPorDNIDesc" />
+      <output wsam:Action="http://services.retailsoft.pucp.org/RRHHWS/listarColaboradoresPorDNIDescResponse" message="tns:listarColaboradoresPorDNIDescResponse" />
+    </operation>
+    <operation name="actualizarColaborador">
+      <input wsam:Action="http://services.retailsoft.pucp.org/RRHHWS/actualizarColaboradorRequest" message="tns:actualizarColaborador" />
+      <output wsam:Action="http://services.retailsoft.pucp.org/RRHHWS/actualizarColaboradorResponse" message="tns:actualizarColaboradorResponse" />
+    </operation>
+  </portType>
+  <binding name="RRHHWSPortBinding" type="tns:RRHHWS">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="listarCandidatosXnombreDNIidPuesto">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarColaboradoresPorApellidoDesc">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarAsistencias">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarCandidato">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarTrazabilidadCandidato">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarTrazaActualIdCandidato">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarCandidatosXidPuesto">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarAsistenciaColaborador">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarAsistenciaPorColaborador">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="actualizarAsistencia">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarPuestoTrabajo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarPuestosPorNombre">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarEstadosCandidato">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarPuestosPorFechaPublicacion">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarTrazaXIdCandidato">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarPuestosPorFechaLimite">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="actualizarPuestoTrabajo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="actualizarCandidato">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarSalario">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarSalario">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarEvento">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="actualizarEvento">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarPuestos">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="verificarCuenta">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarEvento">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarPuesto">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarColaborador">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarTodosCargos">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarColaboradoresPorDNINombre">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarBeneficiosTodos">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarBeneficiosPorIdColaborador">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarColaboradoresPorIdEvento">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarBeneficioXColaborador">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarColaboradoresTodos">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarEventosTodos">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarBeneficioxColaborador">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarColaboradoresPorIdCargo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarColaboradorXEvento">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarColaborador">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getSalarioPorIdColaborador">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarEventosPorNombre">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarColaboradorXEvento">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarEventosPorFecha">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarColaboradoresPorDNIDesc">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="actualizarColaborador">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="RRHHWS">
+    <port name="RRHHWSPort" binding="tns:RRHHWSPortBinding">
+      <soap:address location="http://localhost:8080/RetailSoftWebServices/RRHHWS" />
+    </port>
+  </service>
+</definitions>

@@ -1,0 +1,668 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://services.retailsoft.pucp.org/" targetNamespace="http://services.retailsoft.pucp.org/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="actualizarAsistencia" type="tns:actualizarAsistencia" />
+  <xs:element name="actualizarAsistenciaResponse" type="tns:actualizarAsistenciaResponse" />
+  <xs:element name="actualizarCandidato" type="tns:actualizarCandidato" />
+  <xs:element name="actualizarCandidatoResponse" type="tns:actualizarCandidatoResponse" />
+  <xs:element name="actualizarColaborador" type="tns:actualizarColaborador" />
+  <xs:element name="actualizarColaboradorResponse" type="tns:actualizarColaboradorResponse" />
+  <xs:element name="actualizarEvento" type="tns:actualizarEvento" />
+  <xs:element name="actualizarEventoResponse" type="tns:actualizarEventoResponse" />
+  <xs:element name="actualizarPuestoTrabajo" type="tns:actualizarPuestoTrabajo" />
+  <xs:element name="actualizarPuestoTrabajoResponse" type="tns:actualizarPuestoTrabajoResponse" />
+  <xs:element name="eliminarBeneficioXColaborador" type="tns:eliminarBeneficioXColaborador" />
+  <xs:element name="eliminarBeneficioXColaboradorResponse" type="tns:eliminarBeneficioXColaboradorResponse" />
+  <xs:element name="eliminarColaborador" type="tns:eliminarColaborador" />
+  <xs:element name="eliminarColaboradorResponse" type="tns:eliminarColaboradorResponse" />
+  <xs:element name="eliminarColaboradorXEvento" type="tns:eliminarColaboradorXEvento" />
+  <xs:element name="eliminarColaboradorXEventoResponse" type="tns:eliminarColaboradorXEventoResponse" />
+  <xs:element name="eliminarEvento" type="tns:eliminarEvento" />
+  <xs:element name="eliminarEventoResponse" type="tns:eliminarEventoResponse" />
+  <xs:element name="eliminarPuesto" type="tns:eliminarPuesto" />
+  <xs:element name="eliminarPuestoResponse" type="tns:eliminarPuestoResponse" />
+  <xs:element name="eliminarSalario" type="tns:eliminarSalario" />
+  <xs:element name="eliminarSalarioResponse" type="tns:eliminarSalarioResponse" />
+  <xs:element name="getSalarioPorIdColaborador" type="tns:getSalarioPorIdColaborador" />
+  <xs:element name="getSalarioPorIdColaboradorResponse" type="tns:getSalarioPorIdColaboradorResponse" />
+  <xs:element name="insertarAsistenciaColaborador" type="tns:insertarAsistenciaColaborador" />
+  <xs:element name="insertarAsistenciaColaboradorResponse" type="tns:insertarAsistenciaColaboradorResponse" />
+  <xs:element name="insertarBeneficioxColaborador" type="tns:insertarBeneficioxColaborador" />
+  <xs:element name="insertarBeneficioxColaboradorResponse" type="tns:insertarBeneficioxColaboradorResponse" />
+  <xs:element name="insertarCandidato" type="tns:insertarCandidato" />
+  <xs:element name="insertarCandidatoResponse" type="tns:insertarCandidatoResponse" />
+  <xs:element name="insertarColaborador" type="tns:insertarColaborador" />
+  <xs:element name="insertarColaboradorResponse" type="tns:insertarColaboradorResponse" />
+  <xs:element name="insertarColaboradorXEvento" type="tns:insertarColaboradorXEvento" />
+  <xs:element name="insertarColaboradorXEventoResponse" type="tns:insertarColaboradorXEventoResponse" />
+  <xs:element name="insertarEvento" type="tns:insertarEvento" />
+  <xs:element name="insertarEventoResponse" type="tns:insertarEventoResponse" />
+  <xs:element name="insertarPuestoTrabajo" type="tns:insertarPuestoTrabajo" />
+  <xs:element name="insertarPuestoTrabajoResponse" type="tns:insertarPuestoTrabajoResponse" />
+  <xs:element name="insertarSalario" type="tns:insertarSalario" />
+  <xs:element name="insertarSalarioResponse" type="tns:insertarSalarioResponse" />
+  <xs:element name="insertarTrazabilidadCandidato" type="tns:insertarTrazabilidadCandidato" />
+  <xs:element name="insertarTrazabilidadCandidatoResponse" type="tns:insertarTrazabilidadCandidatoResponse" />
+  <xs:element name="listarAsistenciaPorColaborador" type="tns:listarAsistenciaPorColaborador" />
+  <xs:element name="listarAsistenciaPorColaboradorResponse" type="tns:listarAsistenciaPorColaboradorResponse" />
+  <xs:element name="listarAsistencias" type="tns:listarAsistencias" />
+  <xs:element name="listarAsistenciasResponse" type="tns:listarAsistenciasResponse" />
+  <xs:element name="listarBeneficiosPorIdColaborador" type="tns:listarBeneficiosPorIdColaborador" />
+  <xs:element name="listarBeneficiosPorIdColaboradorResponse" type="tns:listarBeneficiosPorIdColaboradorResponse" />
+  <xs:element name="listarBeneficiosTodos" type="tns:listarBeneficiosTodos" />
+  <xs:element name="listarBeneficiosTodosResponse" type="tns:listarBeneficiosTodosResponse" />
+  <xs:element name="listarCandidatosXidPuesto" type="tns:listarCandidatosXidPuesto" />
+  <xs:element name="listarCandidatosXidPuestoResponse" type="tns:listarCandidatosXidPuestoResponse" />
+  <xs:element name="listarCandidatosXnombreDNIidPuesto" type="tns:listarCandidatosXnombreDNIidPuesto" />
+  <xs:element name="listarCandidatosXnombreDNIidPuestoResponse" type="tns:listarCandidatosXnombreDNIidPuestoResponse" />
+  <xs:element name="listarColaboradoresPorApellidoDesc" type="tns:listarColaboradoresPorApellidoDesc" />
+  <xs:element name="listarColaboradoresPorApellidoDescResponse" type="tns:listarColaboradoresPorApellidoDescResponse" />
+  <xs:element name="listarColaboradoresPorDNIDesc" type="tns:listarColaboradoresPorDNIDesc" />
+  <xs:element name="listarColaboradoresPorDNIDescResponse" type="tns:listarColaboradoresPorDNIDescResponse" />
+  <xs:element name="listarColaboradoresPorDNINombre" type="tns:listarColaboradoresPorDNINombre" />
+  <xs:element name="listarColaboradoresPorDNINombreResponse" type="tns:listarColaboradoresPorDNINombreResponse" />
+  <xs:element name="listarColaboradoresPorIdCargo" type="tns:listarColaboradoresPorIdCargo" />
+  <xs:element name="listarColaboradoresPorIdCargoResponse" type="tns:listarColaboradoresPorIdCargoResponse" />
+  <xs:element name="listarColaboradoresPorIdEvento" type="tns:listarColaboradoresPorIdEvento" />
+  <xs:element name="listarColaboradoresPorIdEventoResponse" type="tns:listarColaboradoresPorIdEventoResponse" />
+  <xs:element name="listarColaboradoresTodos" type="tns:listarColaboradoresTodos" />
+  <xs:element name="listarColaboradoresTodosResponse" type="tns:listarColaboradoresTodosResponse" />
+  <xs:element name="listarEstadosCandidato" type="tns:listarEstadosCandidato" />
+  <xs:element name="listarEstadosCandidatoResponse" type="tns:listarEstadosCandidatoResponse" />
+  <xs:element name="listarEventosPorFecha" type="tns:listarEventosPorFecha" />
+  <xs:element name="listarEventosPorFechaResponse" type="tns:listarEventosPorFechaResponse" />
+  <xs:element name="listarEventosPorNombre" type="tns:listarEventosPorNombre" />
+  <xs:element name="listarEventosPorNombreResponse" type="tns:listarEventosPorNombreResponse" />
+  <xs:element name="listarEventosTodos" type="tns:listarEventosTodos" />
+  <xs:element name="listarEventosTodosResponse" type="tns:listarEventosTodosResponse" />
+  <xs:element name="listarPuestos" type="tns:listarPuestos" />
+  <xs:element name="listarPuestosPorFechaLimite" type="tns:listarPuestosPorFechaLimite" />
+  <xs:element name="listarPuestosPorFechaLimiteResponse" type="tns:listarPuestosPorFechaLimiteResponse" />
+  <xs:element name="listarPuestosPorFechaPublicacion" type="tns:listarPuestosPorFechaPublicacion" />
+  <xs:element name="listarPuestosPorFechaPublicacionResponse" type="tns:listarPuestosPorFechaPublicacionResponse" />
+  <xs:element name="listarPuestosPorNombre" type="tns:listarPuestosPorNombre" />
+  <xs:element name="listarPuestosPorNombreResponse" type="tns:listarPuestosPorNombreResponse" />
+  <xs:element name="listarPuestosResponse" type="tns:listarPuestosResponse" />
+  <xs:element name="listarTodosCargos" type="tns:listarTodosCargos" />
+  <xs:element name="listarTodosCargosResponse" type="tns:listarTodosCargosResponse" />
+  <xs:element name="listarTrazaActualIdCandidato" type="tns:listarTrazaActualIdCandidato" />
+  <xs:element name="listarTrazaActualIdCandidatoResponse" type="tns:listarTrazaActualIdCandidatoResponse" />
+  <xs:element name="listarTrazaXIdCandidato" type="tns:listarTrazaXIdCandidato" />
+  <xs:element name="listarTrazaXIdCandidatoResponse" type="tns:listarTrazaXIdCandidatoResponse" />
+  <xs:element name="verificarCuenta" type="tns:verificarCuenta" />
+  <xs:element name="verificarCuentaResponse" type="tns:verificarCuentaResponse" />
+  <xs:complexType name="actualizarEvento">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="evento" type="tns:evento" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="evento">
+    <xs:sequence>
+      <xs:element name="activo" type="xs:boolean" />
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element minOccurs="0" name="fechaRealizacion" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="horaFin" type="xs:string" />
+      <xs:element minOccurs="0" name="horaInicio" type="xs:string" />
+      <xs:element name="idEvento" type="xs:int" />
+      <xs:element minOccurs="0" name="imagen" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="lugar" type="xs:string" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element name="totalInvitados" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="actualizarEventoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarPuesto">
+    <xs:sequence>
+      <xs:element name="idPuesto" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarPuestoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarTodosCargos">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarTodosCargosResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:cargo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="cargo">
+    <xs:sequence>
+      <xs:element name="activo" type="xs:boolean" />
+      <xs:element name="idCargo" type="xs:int" />
+      <xs:element minOccurs="0" name="tipoCargo" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="actualizarCandidato">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="candidato" type="tns:candidato" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="candidato">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:persona">
+        <xs:sequence>
+          <xs:element name="activo" type="xs:boolean" />
+          <xs:element minOccurs="0" name="cv" type="xs:base64Binary" />
+          <xs:element name="idCandidato" type="xs:int" />
+          <xs:element minOccurs="0" name="puestoTrabajo" type="tns:puestoTrabajo" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="persona" abstract="true">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="apellidoMaterno" type="xs:string" />
+      <xs:element minOccurs="0" name="apellidoPaterno" type="xs:string" />
+      <xs:element minOccurs="0" name="correoElectronico" type="xs:string" />
+      <xs:element minOccurs="0" name="dni" type="xs:string" />
+      <xs:element minOccurs="0" name="fechaNacimiento" type="xs:dateTime" />
+      <xs:element name="genero" type="xs:unsignedShort" />
+      <xs:element name="idPersona" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="telefono" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="puestoTrabajo">
+    <xs:sequence>
+      <xs:element name="activo" type="xs:boolean" />
+      <xs:element minOccurs="0" name="correoResponsable" type="xs:string" />
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element minOccurs="0" name="fechaLimite" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="fechaPublicacion" type="xs:dateTime" />
+      <xs:element name="idPuestoTrabajo" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="requisitos" type="xs:string" />
+      <xs:element name="vacantes" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="actualizarCandidatoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarColaboradorXEvento">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="colabxevento" type="tns:colaboradorxEvento" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="colaboradorxEvento">
+    <xs:sequence>
+      <xs:element name="asistencia" type="xs:boolean" />
+      <xs:element minOccurs="0" name="colaborador" type="tns:colaborador" />
+      <xs:element minOccurs="0" name="evento" type="tns:evento" />
+      <xs:element name="idColaboradorxEvento" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="colaborador">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:persona">
+        <xs:sequence>
+          <xs:element name="activo" type="xs:boolean" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="beneficios" nillable="true" type="tns:beneficio" />
+          <xs:element minOccurs="0" name="cargo" type="tns:cargo" />
+          <xs:element minOccurs="0" name="contrasenha" type="xs:string" />
+          <xs:element minOccurs="0" name="horaIngreso" type="xs:string" />
+          <xs:element minOccurs="0" name="horaSalida" type="xs:string" />
+          <xs:element name="idColaborador" type="xs:int" />
+          <xs:element minOccurs="0" name="imagen" type="xs:base64Binary" />
+          <xs:element minOccurs="0" name="usuario" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="beneficio">
+    <xs:sequence>
+      <xs:element name="activo" type="xs:boolean" />
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element name="idBeneficio" type="xs:int" />
+      <xs:element name="monto" type="xs:double" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarColaboradorXEventoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarBeneficioXColaborador">
+    <xs:sequence>
+      <xs:element name="idBenxcolab" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarBeneficioXColaboradorResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarTrazabilidadCandidato">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="traza" type="tns:trazabilidadCandidato" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="trazabilidadCandidato">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="candidato" type="tns:candidato" />
+      <xs:element minOccurs="0" name="estadoCandidato" type="tns:estadoCandidato" />
+      <xs:element minOccurs="0" name="fecha" type="xs:dateTime" />
+      <xs:element name="idTrazabilidadCandidato" type="xs:int" />
+      <xs:element minOccurs="0" name="observacion" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="estadoCandidato">
+    <xs:sequence>
+      <xs:element name="activo" type="xs:boolean" />
+      <xs:element name="idEstadoCandidato" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarTrazabilidadCandidatoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="verificarCuenta">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="usuario" type="xs:string" />
+      <xs:element minOccurs="0" name="contrasenha" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="verificarCuentaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:colaborador" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarCandidato">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="candidato" type="tns:candidato" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarCandidatoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarColaboradoresPorApellidoDesc">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarColaboradoresPorApellidoDescResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:colaborador" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarColaboradoresPorDNIDesc">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarColaboradoresPorDNIDescResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:colaborador" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarAsistenciaPorColaborador">
+    <xs:sequence>
+      <xs:element name="colaborador" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarAsistenciaPorColaboradorResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:asistenciaColaborador" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="asistenciaColaborador">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="colaborador" type="tns:colaborador" />
+      <xs:element minOccurs="0" name="fechaAsistencia" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="horaIngreso" type="xs:string" />
+      <xs:element minOccurs="0" name="horaSalida" type="xs:string" />
+      <xs:element name="horasTrabajadas" type="xs:double" />
+      <xs:element name="idAsistencia" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarBeneficioxColaborador">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="benxcolab" type="tns:beneficioxColaborador" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="beneficioxColaborador">
+    <xs:sequence>
+      <xs:element name="activo" type="xs:boolean" />
+      <xs:element minOccurs="0" name="beneficio" type="tns:beneficio" />
+      <xs:element minOccurs="0" name="colaborador" type="tns:colaborador" />
+      <xs:element minOccurs="0" name="fechaRegistro" type="xs:dateTime" />
+      <xs:element name="idBeneficioxColaborador" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarBeneficioxColaboradorResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarCandidatosXnombreDNIidPuesto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element name="idPuesto" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarCandidatosXnombreDNIidPuestoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:candidato" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarEstadosCandidato">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarEstadosCandidatoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:estadoCandidato" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarSalario">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="salario" type="tns:salario" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="salario">
+    <xs:sequence>
+      <xs:element name="activo" type="xs:boolean" />
+      <xs:element minOccurs="0" name="colaborador" type="tns:colaborador" />
+      <xs:element minOccurs="0" name="fechaRegistro" type="xs:dateTime" />
+      <xs:element name="idSalario" type="xs:int" />
+      <xs:element name="salarioBase" type="xs:double" />
+      <xs:element name="salarioFinal" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarSalarioResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarAsistencias">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarAsistenciasResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:asistenciaColaborador" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarColaboradoresPorIdCargo">
+    <xs:sequence>
+      <xs:element name="idCargo" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarColaboradoresPorIdCargoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:colaborador" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarTrazaActualIdCandidato">
+    <xs:sequence>
+      <xs:element name="idCand" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarTrazaActualIdCandidatoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:trazabilidadCandidato" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getSalarioPorIdColaborador">
+    <xs:sequence>
+      <xs:element name="idColab" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getSalarioPorIdColaboradorResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:salario" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarTrazaXIdCandidato">
+    <xs:sequence>
+      <xs:element name="idCand" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarTrazaXIdCandidatoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:trazabilidadCandidato" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarSalario">
+    <xs:sequence>
+      <xs:element name="idSalario" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarSalarioResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarCandidatosXidPuesto">
+    <xs:sequence>
+      <xs:element name="idPuesto" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarCandidatosXidPuestoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:candidato" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarPuestos">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarPuestosResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:puestoTrabajo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarColaboradoresPorDNINombre">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DNInombre" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarColaboradoresPorDNINombreResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:colaborador" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarAsistenciaColaborador">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="asistencia" type="tns:asistenciaColaborador" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarAsistenciaColaboradorResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarPuestosPorNombre">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarPuestosPorNombreResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:puestoTrabajo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarEvento">
+    <xs:sequence>
+      <xs:element name="idEvento" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarEventoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarColaborador">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="colaborador" type="tns:colaborador" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarColaboradorResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarEventosPorFecha">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="fechaInicio" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="fechaFin" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarEventosPorFechaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:evento" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarEventosTodos">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarEventosTodosResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:evento" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarBeneficiosPorIdColaborador">
+    <xs:sequence>
+      <xs:element name="idColab" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarBeneficiosPorIdColaboradorResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:beneficioxColaborador" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="actualizarPuestoTrabajo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="puesto" type="tns:puestoTrabajo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="actualizarPuestoTrabajoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarEventosPorNombre">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarEventosPorNombreResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:evento" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarColaboradoresPorIdEvento">
+    <xs:sequence>
+      <xs:element name="idEvento" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarColaboradoresPorIdEventoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:colaboradorxEvento" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarColaboradoresTodos">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarColaboradoresTodosResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:colaborador" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarBeneficiosTodos">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarBeneficiosTodosResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:beneficio" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarPuestosPorFechaPublicacion">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="fechaInicio" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="fechaFin" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarPuestosPorFechaPublicacionResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:puestoTrabajo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarColaboradorXEvento">
+    <xs:sequence>
+      <xs:element name="idColabxEvento" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarColaboradorXEventoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarPuestosPorFechaLimite">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="fechaInicio" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="fechaFin" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarPuestosPorFechaLimiteResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:puestoTrabajo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="actualizarColaborador">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="colaborador" type="tns:colaborador" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="actualizarColaboradorResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="actualizarAsistencia">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="asistencia" type="tns:asistenciaColaborador" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="actualizarAsistenciaResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarPuestoTrabajo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="puesto" type="tns:puestoTrabajo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarPuestoTrabajoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarColaborador">
+    <xs:sequence>
+      <xs:element name="idColaborador" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarColaboradorResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarEvento">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="evento" type="tns:evento" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarEventoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

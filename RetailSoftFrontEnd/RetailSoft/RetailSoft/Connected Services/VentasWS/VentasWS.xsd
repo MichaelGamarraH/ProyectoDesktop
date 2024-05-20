@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://services.retailsoft.pucp.org/" targetNamespace="http://services.retailsoft.pucp.org/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="insertarVenta" type="tns:insertarVenta" />
+  <xs:element name="insertarVentaResponse" type="tns:insertarVentaResponse" />
+  <xs:element name="listarVentasXIdDNICliente" type="tns:listarVentasXIdDNICliente" />
+  <xs:element name="listarVentasXIdDNIClienteResponse" type="tns:listarVentasXIdDNIClienteResponse" />
+  <xs:element name="listarVentasXIdVenta" type="tns:listarVentasXIdVenta" />
+  <xs:element name="listarVentasXIdVentaResponse" type="tns:listarVentasXIdVentaResponse" />
+  <xs:complexType name="listarVentasXIdVenta">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="idVenta" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarVentasXIdVentaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:lineaVenta" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="lineaVenta">
+    <xs:sequence>
+      <xs:element name="activo" type="xs:boolean" />
+      <xs:element name="cantidad" type="xs:int" />
+      <xs:element name="idLineaPedido" type="xs:int" />
+      <xs:element minOccurs="0" name="producto" type="tns:producto" />
+      <xs:element name="subTotal" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="producto">
+    <xs:sequence>
+      <xs:element name="activo" type="xs:boolean" />
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element name="estado" type="xs:boolean" />
+      <xs:element name="idProducto" type="xs:int" />
+      <xs:element minOccurs="0" name="imagen" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="marcaProducto" type="tns:marcaProducto" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element name="precio" type="xs:double" />
+      <xs:element minOccurs="0" name="promocion" type="tns:promocion" />
+      <xs:element name="stock" type="xs:int" />
+      <xs:element minOccurs="0" name="subcategoriaProducto" type="tns:subcategoriaProducto" />
+      <xs:element minOccurs="0" name="tallaModelo" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="marcaProducto">
+    <xs:sequence>
+      <xs:element name="activo" type="xs:boolean" />
+      <xs:element minOccurs="0" name="icono" type="xs:base64Binary" />
+      <xs:element name="idMarcaProducto" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="promocion">
+    <xs:sequence>
+      <xs:element name="activo" type="xs:boolean" />
+      <xs:element minOccurs="0" name="categoriaProducto" type="tns:categoriaProducto" />
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element name="descuento" type="xs:double" />
+      <xs:element minOccurs="0" name="fechaFin" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="fechaInicio" type="xs:dateTime" />
+      <xs:element name="idPromocion" type="xs:int" />
+      <xs:element minOccurs="0" name="imagen" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element name="precioPromocion" type="xs:double" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="productosXpromocion" nillable="true" type="tns:productoxPromocion" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="categoriaProducto">
+    <xs:sequence>
+      <xs:element name="activo" type="xs:boolean" />
+      <xs:element minOccurs="0" name="icono" type="xs:base64Binary" />
+      <xs:element name="idCategoriaProducto" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="productoxPromocion">
+    <xs:sequence>
+      <xs:element name="activo" type="xs:boolean" />
+      <xs:element name="idProductoxPromocion" type="xs:int" />
+      <xs:element minOccurs="0" name="producto" type="tns:producto" />
+      <xs:element minOccurs="0" name="promocion" type="tns:promocion" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="subcategoriaProducto">
+    <xs:sequence>
+      <xs:element name="activo" type="xs:boolean" />
+      <xs:element minOccurs="0" name="categoriaProducto" type="tns:categoriaProducto" />
+      <xs:element minOccurs="0" name="icono" type="xs:base64Binary" />
+      <xs:element name="idSubcategoriaProducto" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarVentasXIdDNICliente">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="idDNICliente" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarVentasXIdDNIClienteResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:venta" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="venta">
+    <xs:sequence>
+      <xs:element name="activo" type="xs:boolean" />
+      <xs:element minOccurs="0" name="cliente" type="tns:cliente" />
+      <xs:element minOccurs="0" name="fechaVenta" type="xs:dateTime" />
+      <xs:element name="idVenta" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="lineasVenta" nillable="true" type="tns:lineaVenta" />
+      <xs:element name="montoTotal" type="xs:double" />
+      <xs:element minOccurs="0" name="promotor" type="tns:colaborador" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="cliente">
+    <xs:sequence>
+      <xs:element name="cantidadPedidos" type="xs:int" />
+      <xs:element minOccurs="0" name="documentoIdentidad" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="documentosVenta" nillable="true" type="tns:documentoVenta" />
+      <xs:element name="idCliente" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="tipoCliente" type="tns:tipoCliente" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="documentoVenta" abstract="true">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="cliente" type="tns:cliente" />
+      <xs:element minOccurs="0" name="fechaEmision" type="xs:dateTime" />
+      <xs:element name="idDocumentoVenta" type="xs:int" />
+      <xs:element minOccurs="0" name="numDocumento" type="xs:string" />
+      <xs:element minOccurs="0" name="venta" type="tns:venta" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="tipoCliente">
+    <xs:sequence>
+      <xs:element name="activo" type="xs:boolean" />
+      <xs:element name="descuento" type="xs:double" />
+      <xs:element name="idTipoCliente" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="colaborador">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:persona">
+        <xs:sequence>
+          <xs:element name="activo" type="xs:boolean" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="beneficios" nillable="true" type="tns:beneficio" />
+          <xs:element minOccurs="0" name="cargo" type="tns:cargo" />
+          <xs:element minOccurs="0" name="contrasenha" type="xs:string" />
+          <xs:element minOccurs="0" name="horaIngreso" type="xs:string" />
+          <xs:element minOccurs="0" name="horaSalida" type="xs:string" />
+          <xs:element name="idColaborador" type="xs:int" />
+          <xs:element minOccurs="0" name="imagen" type="xs:base64Binary" />
+          <xs:element minOccurs="0" name="usuario" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="persona" abstract="true">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="apellidoMaterno" type="xs:string" />
+      <xs:element minOccurs="0" name="apellidoPaterno" type="xs:string" />
+      <xs:element minOccurs="0" name="correoElectronico" type="xs:string" />
+      <xs:element minOccurs="0" name="dni" type="xs:string" />
+      <xs:element minOccurs="0" name="fechaNacimiento" type="xs:dateTime" />
+      <xs:element name="genero" type="xs:unsignedShort" />
+      <xs:element name="idPersona" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="telefono" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="beneficio">
+    <xs:sequence>
+      <xs:element name="activo" type="xs:boolean" />
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element name="idBeneficio" type="xs:int" />
+      <xs:element name="monto" type="xs:double" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="cargo">
+    <xs:sequence>
+      <xs:element name="activo" type="xs:boolean" />
+      <xs:element name="idCargo" type="xs:int" />
+      <xs:element minOccurs="0" name="tipoCargo" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarVenta">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="venta" type="tns:venta" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarVentaResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

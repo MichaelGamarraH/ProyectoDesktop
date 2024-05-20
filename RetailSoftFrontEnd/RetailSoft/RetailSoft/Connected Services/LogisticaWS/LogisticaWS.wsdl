@@ -1,0 +1,987 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://services.retailsoft.pucp.org/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" name="LogisticaWS" targetNamespace="http://services.retailsoft.pucp.org/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://localhost:8080/RetailSoftWebServices/LogisticaWS?xsd=1" namespace="http://services.retailsoft.pucp.org/" />
+    </xsd:schema>
+  </types>
+  <message name="listarLotexCriterioControlCalidad">
+    <part name="parameters" element="tns:listarLotexCriterioControlCalidad" />
+  </message>
+  <message name="listarLotexCriterioControlCalidadResponse">
+    <part name="parameters" element="tns:listarLotexCriterioControlCalidadResponse" />
+  </message>
+  <message name="insertarTransportista">
+    <part name="parameters" element="tns:insertarTransportista" />
+  </message>
+  <message name="insertarTransportistaResponse">
+    <part name="parameters" element="tns:insertarTransportistaResponse" />
+  </message>
+  <message name="modificarTransportista">
+    <part name="parameters" element="tns:modificarTransportista" />
+  </message>
+  <message name="modificarTransportistaResponse">
+    <part name="parameters" element="tns:modificarTransportistaResponse" />
+  </message>
+  <message name="listadoTransportista">
+    <part name="parameters" element="tns:listadoTransportista" />
+  </message>
+  <message name="listadoTransportistaResponse">
+    <part name="parameters" element="tns:listadoTransportistaResponse" />
+  </message>
+  <message name="eliminarTransportista">
+    <part name="parameters" element="tns:eliminarTransportista" />
+  </message>
+  <message name="eliminarTransportistaResponse">
+    <part name="parameters" element="tns:eliminarTransportistaResponse" />
+  </message>
+  <message name="modificarAlmacen">
+    <part name="parameters" element="tns:modificarAlmacen" />
+  </message>
+  <message name="modificarAlmacenResponse">
+    <part name="parameters" element="tns:modificarAlmacenResponse" />
+  </message>
+  <message name="insertarLote">
+    <part name="parameters" element="tns:insertarLote" />
+  </message>
+  <message name="insertarLoteResponse">
+    <part name="parameters" element="tns:insertarLoteResponse" />
+  </message>
+  <message name="listadoAlmacen">
+    <part name="parameters" element="tns:listadoAlmacen" />
+  </message>
+  <message name="listadoAlmacenResponse">
+    <part name="parameters" element="tns:listadoAlmacenResponse" />
+  </message>
+  <message name="listadoVehiculos">
+    <part name="parameters" element="tns:listadoVehiculos" />
+  </message>
+  <message name="listadoVehiculosResponse">
+    <part name="parameters" element="tns:listadoVehiculosResponse" />
+  </message>
+  <message name="insertarAlmacen">
+    <part name="parameters" element="tns:insertarAlmacen" />
+  </message>
+  <message name="insertarAlmacenResponse">
+    <part name="parameters" element="tns:insertarAlmacenResponse" />
+  </message>
+  <message name="insertarProducto">
+    <part name="parameters" element="tns:insertarProducto" />
+  </message>
+  <message name="insertarProductoResponse">
+    <part name="parameters" element="tns:insertarProductoResponse" />
+  </message>
+  <message name="insertarVehiculo">
+    <part name="parameters" element="tns:insertarVehiculo" />
+  </message>
+  <message name="insertarVehiculoResponse">
+    <part name="parameters" element="tns:insertarVehiculoResponse" />
+  </message>
+  <message name="listarLotes">
+    <part name="parameters" element="tns:listarLotes" />
+  </message>
+  <message name="listarLotesResponse">
+    <part name="parameters" element="tns:listarLotesResponse" />
+  </message>
+  <message name="eliminarLote">
+    <part name="parameters" element="tns:eliminarLote" />
+  </message>
+  <message name="eliminarLoteResponse">
+    <part name="parameters" element="tns:eliminarLoteResponse" />
+  </message>
+  <message name="eliminarProducto">
+    <part name="parameters" element="tns:eliminarProducto" />
+  </message>
+  <message name="eliminarProductoResponse">
+    <part name="parameters" element="tns:eliminarProductoResponse" />
+  </message>
+  <message name="modificarLote">
+    <part name="parameters" element="tns:modificarLote" />
+  </message>
+  <message name="modificarLoteResponse">
+    <part name="parameters" element="tns:modificarLoteResponse" />
+  </message>
+  <message name="actualizarStock">
+    <part name="parameters" element="tns:actualizarStock" />
+  </message>
+  <message name="actualizarStockResponse">
+    <part name="parameters" element="tns:actualizarStockResponse" />
+  </message>
+  <message name="listarProductos">
+    <part name="parameters" element="tns:listarProductos" />
+  </message>
+  <message name="listarProductosResponse">
+    <part name="parameters" element="tns:listarProductosResponse" />
+  </message>
+  <message name="modificarProveedor">
+    <part name="parameters" element="tns:modificarProveedor" />
+  </message>
+  <message name="modificarProveedorResponse">
+    <part name="parameters" element="tns:modificarProveedorResponse" />
+  </message>
+  <message name="eliminarAlmacenxVehiculo">
+    <part name="parameters" element="tns:eliminarAlmacenxVehiculo" />
+  </message>
+  <message name="eliminarAlmacenxVehiculoResponse">
+    <part name="parameters" element="tns:eliminarAlmacenxVehiculoResponse" />
+  </message>
+  <message name="insertarTipoVehiculo">
+    <part name="parameters" element="tns:insertarTipoVehiculo" />
+  </message>
+  <message name="insertarTipoVehiculoResponse">
+    <part name="parameters" element="tns:insertarTipoVehiculoResponse" />
+  </message>
+  <message name="listarPromocionesXCategoria">
+    <part name="parameters" element="tns:listarPromocionesXCategoria" />
+  </message>
+  <message name="listarPromocionesXCategoriaResponse">
+    <part name="parameters" element="tns:listarPromocionesXCategoriaResponse" />
+  </message>
+  <message name="listarLotesXFechaCompra">
+    <part name="parameters" element="tns:listarLotesXFechaCompra" />
+  </message>
+  <message name="listarLotesXFechaCompraResponse">
+    <part name="parameters" element="tns:listarLotesXFechaCompraResponse" />
+  </message>
+  <message name="listarSubcategoriasProducto">
+    <part name="parameters" element="tns:listarSubcategoriasProducto" />
+  </message>
+  <message name="listarSubcategoriasProductoResponse">
+    <part name="parameters" element="tns:listarSubcategoriasProductoResponse" />
+  </message>
+  <message name="listarMarcasProducto">
+    <part name="parameters" element="tns:listarMarcasProducto" />
+  </message>
+  <message name="listarMarcasProductoResponse">
+    <part name="parameters" element="tns:listarMarcasProductoResponse" />
+  </message>
+  <message name="listarLotesXFechaLlegada">
+    <part name="parameters" element="tns:listarLotesXFechaLlegada" />
+  </message>
+  <message name="listarLotesXFechaLlegadaResponse">
+    <part name="parameters" element="tns:listarLotesXFechaLlegadaResponse" />
+  </message>
+  <message name="listarCategoriasProducto">
+    <part name="parameters" element="tns:listarCategoriasProducto" />
+  </message>
+  <message name="listarCategoriasProductoResponse">
+    <part name="parameters" element="tns:listarCategoriasProductoResponse" />
+  </message>
+  <message name="listarLotesXProveedor">
+    <part name="parameters" element="tns:listarLotesXProveedor" />
+  </message>
+  <message name="listarLotesXProveedorResponse">
+    <part name="parameters" element="tns:listarLotesXProveedorResponse" />
+  </message>
+  <message name="modificarProducto">
+    <part name="parameters" element="tns:modificarProducto" />
+  </message>
+  <message name="modificarProductoResponse">
+    <part name="parameters" element="tns:modificarProductoResponse" />
+  </message>
+  <message name="listarPorIdAlmacen">
+    <part name="parameters" element="tns:listarPorIdAlmacen" />
+  </message>
+  <message name="listarPorIdAlmacenResponse">
+    <part name="parameters" element="tns:listarPorIdAlmacenResponse" />
+  </message>
+  <message name="listadoTipoVehiculos">
+    <part name="parameters" element="tns:listadoTipoVehiculos" />
+  </message>
+  <message name="listadoTipoVehiculosResponse">
+    <part name="parameters" element="tns:listadoTipoVehiculosResponse" />
+  </message>
+  <message name="insertarAlmacenxVehiculo">
+    <part name="parameters" element="tns:insertarAlmacenxVehiculo" />
+  </message>
+  <message name="insertarAlmacenxVehiculoResponse">
+    <part name="parameters" element="tns:insertarAlmacenxVehiculoResponse" />
+  </message>
+  <message name="listadoAlmacenxVehiculo">
+    <part name="parameters" element="tns:listadoAlmacenxVehiculo" />
+  </message>
+  <message name="listadoAlmacenxVehiculoResponse">
+    <part name="parameters" element="tns:listadoAlmacenxVehiculoResponse" />
+  </message>
+  <message name="listarProveedorEntreFechas">
+    <part name="parameters" element="tns:listarProveedorEntreFechas" />
+  </message>
+  <message name="listarProveedorEntreFechasResponse">
+    <part name="parameters" element="tns:listarProveedorEntreFechasResponse" />
+  </message>
+  <message name="listarProductosxCategoria">
+    <part name="parameters" element="tns:listarProductosxCategoria" />
+  </message>
+  <message name="listarProductosxCategoriaResponse">
+    <part name="parameters" element="tns:listarProductosxCategoriaResponse" />
+  </message>
+  <message name="listadoProveedores">
+    <part name="parameters" element="tns:listadoProveedores" />
+  </message>
+  <message name="listadoProveedoresResponse">
+    <part name="parameters" element="tns:listadoProveedoresResponse" />
+  </message>
+  <message name="listarLotesXIDProveedorAlmacen">
+    <part name="parameters" element="tns:listarLotesXIDProveedorAlmacen" />
+  </message>
+  <message name="listarLotesXIDProveedorAlmacenResponse">
+    <part name="parameters" element="tns:listarLotesXIDProveedorAlmacenResponse" />
+  </message>
+  <message name="insertarProveedor">
+    <part name="parameters" element="tns:insertarProveedor" />
+  </message>
+  <message name="insertarProveedorResponse">
+    <part name="parameters" element="tns:insertarProveedorResponse" />
+  </message>
+  <message name="eliminarProveedor">
+    <part name="parameters" element="tns:eliminarProveedor" />
+  </message>
+  <message name="eliminarProveedorResponse">
+    <part name="parameters" element="tns:eliminarProveedorResponse" />
+  </message>
+  <message name="insertarPromocion">
+    <part name="parameters" element="tns:insertarPromocion" />
+  </message>
+  <message name="insertarPromocionResponse">
+    <part name="parameters" element="tns:insertarPromocionResponse" />
+  </message>
+  <message name="modificarAlmacenxVehiculo">
+    <part name="parameters" element="tns:modificarAlmacenxVehiculo" />
+  </message>
+  <message name="modificarAlmacenxVehiculoResponse">
+    <part name="parameters" element="tns:modificarAlmacenxVehiculoResponse" />
+  </message>
+  <message name="listarProductosXPromocion">
+    <part name="parameters" element="tns:listarProductosXPromocion" />
+  </message>
+  <message name="listarProductosXPromocionResponse">
+    <part name="parameters" element="tns:listarProductosXPromocionResponse" />
+  </message>
+  <message name="listadoRecientesProveedores">
+    <part name="parameters" element="tns:listadoRecientesProveedores" />
+  </message>
+  <message name="listadoRecientesProveedoresResponse">
+    <part name="parameters" element="tns:listadoRecientesProveedoresResponse" />
+  </message>
+  <message name="listadoAntiguosProveedores">
+    <part name="parameters" element="tns:listadoAntiguosProveedores" />
+  </message>
+  <message name="listadoAntiguosProveedoresResponse">
+    <part name="parameters" element="tns:listadoAntiguosProveedoresResponse" />
+  </message>
+  <message name="listarSubcategoriasXCategoria">
+    <part name="parameters" element="tns:listarSubcategoriasXCategoria" />
+  </message>
+  <message name="listarSubcategoriasXCategoriaResponse">
+    <part name="parameters" element="tns:listarSubcategoriasXCategoriaResponse" />
+  </message>
+  <message name="listarCriteriosControlCalidad">
+    <part name="parameters" element="tns:listarCriteriosControlCalidad" />
+  </message>
+  <message name="listarCriteriosControlCalidadResponse">
+    <part name="parameters" element="tns:listarCriteriosControlCalidadResponse" />
+  </message>
+  <message name="listarProductosxIdNombre">
+    <part name="parameters" element="tns:listarProductosxIdNombre" />
+  </message>
+  <message name="listarProductosxIdNombreResponse">
+    <part name="parameters" element="tns:listarProductosxIdNombreResponse" />
+  </message>
+  <message name="listarProductosxMarca">
+    <part name="parameters" element="tns:listarProductosxMarca" />
+  </message>
+  <message name="listarProductosxMarcaResponse">
+    <part name="parameters" element="tns:listarProductosxMarcaResponse" />
+  </message>
+  <message name="listarPorNombreProveedor">
+    <part name="parameters" element="tns:listarPorNombreProveedor" />
+  </message>
+  <message name="listarPorNombreProveedorResponse">
+    <part name="parameters" element="tns:listarPorNombreProveedorResponse" />
+  </message>
+  <message name="insertarCategoria">
+    <part name="parameters" element="tns:insertarCategoria" />
+  </message>
+  <message name="insertarCategoriaResponse">
+    <part name="parameters" element="tns:insertarCategoriaResponse" />
+  </message>
+  <message name="modificarCategoria">
+    <part name="parameters" element="tns:modificarCategoria" />
+  </message>
+  <message name="modificarCategoriaResponse">
+    <part name="parameters" element="tns:modificarCategoriaResponse" />
+  </message>
+  <portType name="LogisticaWS">
+    <operation name="listarLotexCriterioControlCalidad">
+      <input wsam:Action="http://services.retailsoft.pucp.org/LogisticaWS/listarLotexCriterioControlCalidadRequest" message="tns:listarLotexCriterioControlCalidad" />
+      <output wsam:Action="http://services.retailsoft.pucp.org/LogisticaWS/listarLotexCriterioControlCalidadResponse" message="tns:listarLotexCriterioControlCalidadResponse" />
+    </operation>
+    <operation name="insertarTransportista">
+      <input wsam:Action="http://services.retailsoft.pucp.org/LogisticaWS/insertarTransportistaRequest" message="tns:insertarTransportista" />
+      <output wsam:Action="http://services.retailsoft.pucp.org/LogisticaWS/insertarTransportistaResponse" message="tns:insertarTransportistaResponse" />
+    </operation>
+    <operation name="modificarTransportista">
+      <input wsam:Action="http://services.retailsoft.pucp.org/LogisticaWS/modificarTransportistaRequest" message="tns:modificarTransportista" />
+      <output wsam:Action="http://services.retailsoft.pucp.org/LogisticaWS/modificarTransportistaResponse" message="tns:modificarTransportistaResponse" />
+    </operation>
+    <operation name="listadoTransportista">
+      <input wsam:Action="http://services.retailsoft.pucp.org/LogisticaWS/listadoTransportistaRequest" message="tns:listadoTransportista" />
+      <output wsam:Action="http://services.retailsoft.pucp.org/LogisticaWS/listadoTransportistaResponse" message="tns:listadoTransportistaResponse" />
+    </operation>
+    <operation name="eliminarTransportista">
+      <input wsam:Action="http://services.retailsoft.pucp.org/LogisticaWS/eliminarTransportistaRequest" message="tns:eliminarTransportista" />
+      <output wsam:Action="http://services.retailsoft.pucp.org/LogisticaWS/eliminarTransportistaResponse" message="tns:eliminarTransportistaResponse" />
+    </operation>
+    <operation name="modificarAlmacen">
+      <input wsam:Action="http://services.retailsoft.pucp.org/LogisticaWS/modificarAlmacenRequest" message="tns:modificarAlmacen" />
+      <output wsam:Action="http://services.retailsoft.pucp.org/LogisticaWS/modificarAlmacenResponse" message="tns:modificarAlmacenResponse" />
+    </operation>
+    <operation name="insertarLote">
+      <input wsam:Action="http://services.retailsoft.pucp.org/LogisticaWS/insertarLoteRequest" message="tns:insertarLote" />
+      <output wsam:Action="http://services.retailsoft.pucp.org/LogisticaWS/insertarLoteResponse" message="tns:insertarLoteResponse" />
+    </operation>
+    <operation name="listadoAlmacen">
+      <input wsam:Action="http://services.retailsoft.pucp.org/LogisticaWS/listadoAlmacenRequest" message="tns:listadoAlmacen" />
+      <output wsam:Action="http://services.retailsoft.pucp.org/LogisticaWS/listadoAlmacenResponse" message="tns:listadoAlmacenResponse" />
+    </operation>
+    <operation name="listadoVehiculos">
+      <input wsam:Action="http://services.retailsoft.pucp.org/LogisticaWS/listadoVehiculosRequest" message="tns:listadoVehiculos" />
+      <output wsam:Action="http://services.retailsoft.pucp.org/LogisticaWS/listadoVehiculosResponse" message="tns:listadoVehiculosResponse" />
+    </operation>
+    <operation name="insertarAlmacen">
+      <input wsam:Action="http://services.retailsoft.pucp.org/LogisticaWS/insertarAlmacenRequest" message="tns:insertarAlmacen" />
+      <output wsam:Action="http://services.retailsoft.pucp.org/LogisticaWS/insertarAlmacenResponse" message="tns:insertarAlmacenResponse" />
+    </operation>
+    <operation name="insertarProducto">
+      <input wsam:Action="http://services.retailsoft.pucp.org/LogisticaWS/insertarProductoRequest" message="tns:insertarProducto" />
+      <output wsam:Action="http://services.retailsoft.pucp.org/LogisticaWS/insertarProductoResponse" message="tns:insertarProductoResponse" />
+    </operation>
+    <operation name="insertarVehiculo">
+      <input wsam:Action="http://services.retailsoft.pucp.org/LogisticaWS/insertarVehiculoRequest" message="tns:insertarVehiculo" />
+      <output wsam:Action="http://services.retailsoft.pucp.org/LogisticaWS/insertarVehiculoResponse" message="tns:insertarVehiculoResponse" />
+    </operation>
+    <operation name="listarLotes">
+      <input wsam:Action="http://services.retailsoft.pucp.org/LogisticaWS/listarLotesRequest" message="tns:listarLotes" />
+      <output wsam:Action="http://services.retailsoft.pucp.org/LogisticaWS/listarLotesResponse" message="tns:listarLotesResponse" />
+    </operation>
+    <operation name="eliminarLote">
+      <input wsam:Action="http://services.retailsoft.pucp.org/LogisticaWS/eliminarLoteRequest" message="tns:eliminarLote" />
+      <output wsam:Action="http://services.retailsoft.pucp.org/LogisticaWS/eliminarLoteResponse" message="tns:eliminarLoteResponse" />
+    </operation>
+    <operation name="eliminarProducto">
+      <input wsam:Action="http://services.retailsoft.pucp.org/LogisticaWS/eliminarProductoRequest" message="tns:eliminarProducto" />
+      <output wsam:Action="http://services.retailsoft.pucp.org/LogisticaWS/eliminarProductoResponse" message="tns:eliminarProductoResponse" />
+    </operation>
+    <operation name="modificarLote">
+      <input wsam:Action="http://services.retailsoft.pucp.org/LogisticaWS/modificarLoteRequest" message="tns:modificarLote" />
+      <output wsam:Action="http://services.retailsoft.pucp.org/LogisticaWS/modificarLoteResponse" message="tns:modificarLoteResponse" />
+    </operation>
+    <operation name="actualizarStock">
+      <input wsam:Action="http://services.retailsoft.pucp.org/LogisticaWS/actualizarStockRequest" message="tns:actualizarStock" />
+      <output wsam:Action="http://services.retailsoft.pucp.org/LogisticaWS/actualizarStockResponse" message="tns:actualizarStockResponse" />
+    </operation>
+    <operation name="listarProductos">
+      <input wsam:Action="http://services.retailsoft.pucp.org/LogisticaWS/listarProductosRequest" message="tns:listarProductos" />
+      <output wsam:Action="http://services.retailsoft.pucp.org/LogisticaWS/listarProductosResponse" message="tns:listarProductosResponse" />
+    </operation>
+    <operation name="modificarProveedor">
+      <input wsam:Action="http://services.retailsoft.pucp.org/LogisticaWS/modificarProveedorRequest" message="tns:modificarProveedor" />
+      <output wsam:Action="http://services.retailsoft.pucp.org/LogisticaWS/modificarProveedorResponse" message="tns:modificarProveedorResponse" />
+    </operation>
+    <operation name="eliminarAlmacenxVehiculo">
+      <input wsam:Action="http://services.retailsoft.pucp.org/LogisticaWS/eliminarAlmacenxVehiculoRequest" message="tns:eliminarAlmacenxVehiculo" />
+      <output wsam:Action="http://services.retailsoft.pucp.org/LogisticaWS/eliminarAlmacenxVehiculoResponse" message="tns:eliminarAlmacenxVehiculoResponse" />
+    </operation>
+    <operation name="insertarTipoVehiculo">
+      <input wsam:Action="http://services.retailsoft.pucp.org/LogisticaWS/insertarTipoVehiculoRequest" message="tns:insertarTipoVehiculo" />
+      <output wsam:Action="http://services.retailsoft.pucp.org/LogisticaWS/insertarTipoVehiculoResponse" message="tns:insertarTipoVehiculoResponse" />
+    </operation>
+    <operation name="listarPromocionesXCategoria">
+      <input wsam:Action="http://services.retailsoft.pucp.org/LogisticaWS/listarPromocionesXCategoriaRequest" message="tns:listarPromocionesXCategoria" />
+      <output wsam:Action="http://services.retailsoft.pucp.org/LogisticaWS/listarPromocionesXCategoriaResponse" message="tns:listarPromocionesXCategoriaResponse" />
+    </operation>
+    <operation name="listarLotesXFechaCompra">
+      <input wsam:Action="http://services.retailsoft.pucp.org/LogisticaWS/listarLotesXFechaCompraRequest" message="tns:listarLotesXFechaCompra" />
+      <output wsam:Action="http://services.retailsoft.pucp.org/LogisticaWS/listarLotesXFechaCompraResponse" message="tns:listarLotesXFechaCompraResponse" />
+    </operation>
+    <operation name="listarSubcategoriasProducto">
+      <input wsam:Action="http://services.retailsoft.pucp.org/LogisticaWS/listarSubcategoriasProductoRequest" message="tns:listarSubcategoriasProducto" />
+      <output wsam:Action="http://services.retailsoft.pucp.org/LogisticaWS/listarSubcategoriasProductoResponse" message="tns:listarSubcategoriasProductoResponse" />
+    </operation>
+    <operation name="listarMarcasProducto">
+      <input wsam:Action="http://services.retailsoft.pucp.org/LogisticaWS/listarMarcasProductoRequest" message="tns:listarMarcasProducto" />
+      <output wsam:Action="http://services.retailsoft.pucp.org/LogisticaWS/listarMarcasProductoResponse" message="tns:listarMarcasProductoResponse" />
+    </operation>
+    <operation name="listarLotesXFechaLlegada">
+      <input wsam:Action="http://services.retailsoft.pucp.org/LogisticaWS/listarLotesXFechaLlegadaRequest" message="tns:listarLotesXFechaLlegada" />
+      <output wsam:Action="http://services.retailsoft.pucp.org/LogisticaWS/listarLotesXFechaLlegadaResponse" message="tns:listarLotesXFechaLlegadaResponse" />
+    </operation>
+    <operation name="listarCategoriasProducto">
+      <input wsam:Action="http://services.retailsoft.pucp.org/LogisticaWS/listarCategoriasProductoRequest" message="tns:listarCategoriasProducto" />
+      <output wsam:Action="http://services.retailsoft.pucp.org/LogisticaWS/listarCategoriasProductoResponse" message="tns:listarCategoriasProductoResponse" />
+    </operation>
+    <operation name="listarLotesXProveedor">
+      <input wsam:Action="http://services.retailsoft.pucp.org/LogisticaWS/listarLotesXProveedorRequest" message="tns:listarLotesXProveedor" />
+      <output wsam:Action="http://services.retailsoft.pucp.org/LogisticaWS/listarLotesXProveedorResponse" message="tns:listarLotesXProveedorResponse" />
+    </operation>
+    <operation name="modificarProducto">
+      <input wsam:Action="http://services.retailsoft.pucp.org/LogisticaWS/modificarProductoRequest" message="tns:modificarProducto" />
+      <output wsam:Action="http://services.retailsoft.pucp.org/LogisticaWS/modificarProductoResponse" message="tns:modificarProductoResponse" />
+    </operation>
+    <operation name="listarPorIdAlmacen">
+      <input wsam:Action="http://services.retailsoft.pucp.org/LogisticaWS/listarPorIdAlmacenRequest" message="tns:listarPorIdAlmacen" />
+      <output wsam:Action="http://services.retailsoft.pucp.org/LogisticaWS/listarPorIdAlmacenResponse" message="tns:listarPorIdAlmacenResponse" />
+    </operation>
+    <operation name="listadoTipoVehiculos">
+      <input wsam:Action="http://services.retailsoft.pucp.org/LogisticaWS/listadoTipoVehiculosRequest" message="tns:listadoTipoVehiculos" />
+      <output wsam:Action="http://services.retailsoft.pucp.org/LogisticaWS/listadoTipoVehiculosResponse" message="tns:listadoTipoVehiculosResponse" />
+    </operation>
+    <operation name="insertarAlmacenxVehiculo">
+      <input wsam:Action="http://services.retailsoft.pucp.org/LogisticaWS/insertarAlmacenxVehiculoRequest" message="tns:insertarAlmacenxVehiculo" />
+      <output wsam:Action="http://services.retailsoft.pucp.org/LogisticaWS/insertarAlmacenxVehiculoResponse" message="tns:insertarAlmacenxVehiculoResponse" />
+    </operation>
+    <operation name="listadoAlmacenxVehiculo">
+      <input wsam:Action="http://services.retailsoft.pucp.org/LogisticaWS/listadoAlmacenxVehiculoRequest" message="tns:listadoAlmacenxVehiculo" />
+      <output wsam:Action="http://services.retailsoft.pucp.org/LogisticaWS/listadoAlmacenxVehiculoResponse" message="tns:listadoAlmacenxVehiculoResponse" />
+    </operation>
+    <operation name="listarProveedorEntreFechas">
+      <input wsam:Action="http://services.retailsoft.pucp.org/LogisticaWS/listarProveedorEntreFechasRequest" message="tns:listarProveedorEntreFechas" />
+      <output wsam:Action="http://services.retailsoft.pucp.org/LogisticaWS/listarProveedorEntreFechasResponse" message="tns:listarProveedorEntreFechasResponse" />
+    </operation>
+    <operation name="listarProductosxCategoria">
+      <input wsam:Action="http://services.retailsoft.pucp.org/LogisticaWS/listarProductosxCategoriaRequest" message="tns:listarProductosxCategoria" />
+      <output wsam:Action="http://services.retailsoft.pucp.org/LogisticaWS/listarProductosxCategoriaResponse" message="tns:listarProductosxCategoriaResponse" />
+    </operation>
+    <operation name="listadoProveedores">
+      <input wsam:Action="http://services.retailsoft.pucp.org/LogisticaWS/listadoProveedoresRequest" message="tns:listadoProveedores" />
+      <output wsam:Action="http://services.retailsoft.pucp.org/LogisticaWS/listadoProveedoresResponse" message="tns:listadoProveedoresResponse" />
+    </operation>
+    <operation name="listarLotesXIDProveedorAlmacen">
+      <input wsam:Action="http://services.retailsoft.pucp.org/LogisticaWS/listarLotesXIDProveedorAlmacenRequest" message="tns:listarLotesXIDProveedorAlmacen" />
+      <output wsam:Action="http://services.retailsoft.pucp.org/LogisticaWS/listarLotesXIDProveedorAlmacenResponse" message="tns:listarLotesXIDProveedorAlmacenResponse" />
+    </operation>
+    <operation name="insertarProveedor">
+      <input wsam:Action="http://services.retailsoft.pucp.org/LogisticaWS/insertarProveedorRequest" message="tns:insertarProveedor" />
+      <output wsam:Action="http://services.retailsoft.pucp.org/LogisticaWS/insertarProveedorResponse" message="tns:insertarProveedorResponse" />
+    </operation>
+    <operation name="eliminarProveedor">
+      <input wsam:Action="http://services.retailsoft.pucp.org/LogisticaWS/eliminarProveedorRequest" message="tns:eliminarProveedor" />
+      <output wsam:Action="http://services.retailsoft.pucp.org/LogisticaWS/eliminarProveedorResponse" message="tns:eliminarProveedorResponse" />
+    </operation>
+    <operation name="insertarPromocion">
+      <input wsam:Action="http://services.retailsoft.pucp.org/LogisticaWS/insertarPromocionRequest" message="tns:insertarPromocion" />
+      <output wsam:Action="http://services.retailsoft.pucp.org/LogisticaWS/insertarPromocionResponse" message="tns:insertarPromocionResponse" />
+    </operation>
+    <operation name="modificarAlmacenxVehiculo">
+      <input wsam:Action="http://services.retailsoft.pucp.org/LogisticaWS/modificarAlmacenxVehiculoRequest" message="tns:modificarAlmacenxVehiculo" />
+      <output wsam:Action="http://services.retailsoft.pucp.org/LogisticaWS/modificarAlmacenxVehiculoResponse" message="tns:modificarAlmacenxVehiculoResponse" />
+    </operation>
+    <operation name="listarProductosXPromocion">
+      <input wsam:Action="http://services.retailsoft.pucp.org/LogisticaWS/listarProductosXPromocionRequest" message="tns:listarProductosXPromocion" />
+      <output wsam:Action="http://services.retailsoft.pucp.org/LogisticaWS/listarProductosXPromocionResponse" message="tns:listarProductosXPromocionResponse" />
+    </operation>
+    <operation name="listadoRecientesProveedores">
+      <input wsam:Action="http://services.retailsoft.pucp.org/LogisticaWS/listadoRecientesProveedoresRequest" message="tns:listadoRecientesProveedores" />
+      <output wsam:Action="http://services.retailsoft.pucp.org/LogisticaWS/listadoRecientesProveedoresResponse" message="tns:listadoRecientesProveedoresResponse" />
+    </operation>
+    <operation name="listadoAntiguosProveedores">
+      <input wsam:Action="http://services.retailsoft.pucp.org/LogisticaWS/listadoAntiguosProveedoresRequest" message="tns:listadoAntiguosProveedores" />
+      <output wsam:Action="http://services.retailsoft.pucp.org/LogisticaWS/listadoAntiguosProveedoresResponse" message="tns:listadoAntiguosProveedoresResponse" />
+    </operation>
+    <operation name="listarSubcategoriasXCategoria">
+      <input wsam:Action="http://services.retailsoft.pucp.org/LogisticaWS/listarSubcategoriasXCategoriaRequest" message="tns:listarSubcategoriasXCategoria" />
+      <output wsam:Action="http://services.retailsoft.pucp.org/LogisticaWS/listarSubcategoriasXCategoriaResponse" message="tns:listarSubcategoriasXCategoriaResponse" />
+    </operation>
+    <operation name="listarCriteriosControlCalidad">
+      <input wsam:Action="http://services.retailsoft.pucp.org/LogisticaWS/listarCriteriosControlCalidadRequest" message="tns:listarCriteriosControlCalidad" />
+      <output wsam:Action="http://services.retailsoft.pucp.org/LogisticaWS/listarCriteriosControlCalidadResponse" message="tns:listarCriteriosControlCalidadResponse" />
+    </operation>
+    <operation name="listarProductosxIdNombre">
+      <input wsam:Action="http://services.retailsoft.pucp.org/LogisticaWS/listarProductosxIdNombreRequest" message="tns:listarProductosxIdNombre" />
+      <output wsam:Action="http://services.retailsoft.pucp.org/LogisticaWS/listarProductosxIdNombreResponse" message="tns:listarProductosxIdNombreResponse" />
+    </operation>
+    <operation name="listarProductosxMarca">
+      <input wsam:Action="http://services.retailsoft.pucp.org/LogisticaWS/listarProductosxMarcaRequest" message="tns:listarProductosxMarca" />
+      <output wsam:Action="http://services.retailsoft.pucp.org/LogisticaWS/listarProductosxMarcaResponse" message="tns:listarProductosxMarcaResponse" />
+    </operation>
+    <operation name="listarPorNombreProveedor">
+      <input wsam:Action="http://services.retailsoft.pucp.org/LogisticaWS/listarPorNombreProveedorRequest" message="tns:listarPorNombreProveedor" />
+      <output wsam:Action="http://services.retailsoft.pucp.org/LogisticaWS/listarPorNombreProveedorResponse" message="tns:listarPorNombreProveedorResponse" />
+    </operation>
+    <operation name="insertarCategoria">
+      <input wsam:Action="http://services.retailsoft.pucp.org/LogisticaWS/insertarCategoriaRequest" message="tns:insertarCategoria" />
+      <output wsam:Action="http://services.retailsoft.pucp.org/LogisticaWS/insertarCategoriaResponse" message="tns:insertarCategoriaResponse" />
+    </operation>
+    <operation name="modificarCategoria">
+      <input wsam:Action="http://services.retailsoft.pucp.org/LogisticaWS/modificarCategoriaRequest" message="tns:modificarCategoria" />
+      <output wsam:Action="http://services.retailsoft.pucp.org/LogisticaWS/modificarCategoriaResponse" message="tns:modificarCategoriaResponse" />
+    </operation>
+  </portType>
+  <binding name="LogisticaWSPortBinding" type="tns:LogisticaWS">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="listarLotexCriterioControlCalidad">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarTransportista">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="modificarTransportista">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listadoTransportista">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarTransportista">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="modificarAlmacen">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarLote">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listadoAlmacen">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listadoVehiculos">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarAlmacen">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarProducto">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarVehiculo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarLotes">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarLote">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarProducto">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="modificarLote">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="actualizarStock">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarProductos">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="modificarProveedor">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarAlmacenxVehiculo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarTipoVehiculo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarPromocionesXCategoria">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarLotesXFechaCompra">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarSubcategoriasProducto">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarMarcasProducto">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarLotesXFechaLlegada">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarCategoriasProducto">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarLotesXProveedor">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="modificarProducto">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarPorIdAlmacen">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listadoTipoVehiculos">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarAlmacenxVehiculo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listadoAlmacenxVehiculo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarProveedorEntreFechas">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarProductosxCategoria">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listadoProveedores">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarLotesXIDProveedorAlmacen">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarProveedor">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarProveedor">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarPromocion">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="modificarAlmacenxVehiculo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarProductosXPromocion">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listadoRecientesProveedores">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listadoAntiguosProveedores">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarSubcategoriasXCategoria">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarCriteriosControlCalidad">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarProductosxIdNombre">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarProductosxMarca">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarPorNombreProveedor">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarCategoria">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="modificarCategoria">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="LogisticaWS">
+    <port name="LogisticaWSPort" binding="tns:LogisticaWSPortBinding">
+      <soap:address location="http://localhost:8080/RetailSoftWebServices/LogisticaWS" />
+    </port>
+  </service>
+</definitions>

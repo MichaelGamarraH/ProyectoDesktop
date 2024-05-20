@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://services.retailsoft.pucp.org/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" name="VentasWS" targetNamespace="http://services.retailsoft.pucp.org/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://localhost:8080/RetailSoftWebServices/VentasWS?xsd=1" namespace="http://services.retailsoft.pucp.org/" />
+    </xsd:schema>
+  </types>
+  <message name="listarVentasXIdDNICliente">
+    <part name="parameters" element="tns:listarVentasXIdDNICliente" />
+  </message>
+  <message name="listarVentasXIdDNIClienteResponse">
+    <part name="parameters" element="tns:listarVentasXIdDNIClienteResponse" />
+  </message>
+  <message name="listarVentasXIdVenta">
+    <part name="parameters" element="tns:listarVentasXIdVenta" />
+  </message>
+  <message name="listarVentasXIdVentaResponse">
+    <part name="parameters" element="tns:listarVentasXIdVentaResponse" />
+  </message>
+  <message name="insertarVenta">
+    <part name="parameters" element="tns:insertarVenta" />
+  </message>
+  <message name="insertarVentaResponse">
+    <part name="parameters" element="tns:insertarVentaResponse" />
+  </message>
+  <portType name="VentasWS">
+    <operation name="listarVentasXIdDNICliente">
+      <input wsam:Action="http://services.retailsoft.pucp.org/VentasWS/listarVentasXIdDNIClienteRequest" message="tns:listarVentasXIdDNICliente" />
+      <output wsam:Action="http://services.retailsoft.pucp.org/VentasWS/listarVentasXIdDNIClienteResponse" message="tns:listarVentasXIdDNIClienteResponse" />
+    </operation>
+    <operation name="listarVentasXIdVenta">
+      <input wsam:Action="http://services.retailsoft.pucp.org/VentasWS/listarVentasXIdVentaRequest" message="tns:listarVentasXIdVenta" />
+      <output wsam:Action="http://services.retailsoft.pucp.org/VentasWS/listarVentasXIdVentaResponse" message="tns:listarVentasXIdVentaResponse" />
+    </operation>
+    <operation name="insertarVenta">
+      <input wsam:Action="http://services.retailsoft.pucp.org/VentasWS/insertarVentaRequest" message="tns:insertarVenta" />
+      <output wsam:Action="http://services.retailsoft.pucp.org/VentasWS/insertarVentaResponse" message="tns:insertarVentaResponse" />
+    </operation>
+  </portType>
+  <binding name="VentasWSPortBinding" type="tns:VentasWS">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="listarVentasXIdDNICliente">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarVentasXIdVenta">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarVenta">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="VentasWS">
+    <port name="VentasWSPort" binding="tns:VentasWSPortBinding">
+      <soap:address location="http://localhost:8080/RetailSoftWebServices/VentasWS" />
+    </port>
+  </service>
+</definitions>
